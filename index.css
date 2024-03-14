@@ -1,0 +1,70 @@
+body{
+  font-family: Geneva, Verdana, sans-serif;
+}
+header{
+  position: sticky; /* Add this line */
+  top: 0; /* Add this line */
+  background-color: rgba(235, 159, 222, 0.5);
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 40px 40px;
+   text-decoration: none;
+   float: right;
+   font-size: 20px;
+   transition: text-decoration 0.3s ease-in-out;
+}
+header #index{
+  font-size: 50px; 
+  float: left;
+}
+
+ li a:hover {
+ font-style: italic; 
+}
+
+header button {
+  text-align: center;
+  padding: 10px 40px;
+  float: right;
+  border: none;
+  font-size: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer;
+  margin: 27px 10px;
+  background-color: pink;
+  transition: box-shadow 0.3s ease-in-out
+}
+header button:hover {
+  box-shadow: 7px 5px 20px 0px #111;
+}
+header button a {
+   text-decoration: none;
+   font-family: Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+
+#ad{
+    background-image:url(resources/waffles.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15%;
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 4px 4px 8px #000000;
+}
