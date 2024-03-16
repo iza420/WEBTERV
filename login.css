@@ -1,12 +1,13 @@
 body{
     font-family: Geneva, Verdana, sans-serif;
+    margin: 20px
 }
 
 img {
     position: absolute; /* Abszolút pozíció */
     top: 0; /* Felülre igazítás */
     right: 0; /* Jobbra igazítás */
-    width: 900px; /* A kép szélessége */
-    height: 1000px; /* A kép magassága */
+    width: 1200px; /* A kép szélessége */
+    height: 960px; /* A kép magassága */
 }
 
