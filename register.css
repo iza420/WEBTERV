@@ -6,20 +6,13 @@ body {
     font-family: Arial; /* Arial betűtípus */
 }
 
-form fieldset {
-    padding-right: 50px; /* Jobb behúzás */
-    padding-left: 50px; /* Bal behúzás */
-    padding-top: 20px; /* Felső behúzás */
-    padding-bottom: 30px; /* Alsó behúzás */
-}
-
-
-legend {
-    text-align: center; /* Középre igazítás */
-    font-size: larger; /* Nagyobb betűnagyság */
-}
-
-label {
-    display: block; /* Az adatok közötti sorköz létrehozása */
-    margin-bottom: 10px; /* Tetszőleges sorköz */
+#ad{
+    background-image:url(resources/waffles.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15%;
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 4px 4px 8px #000000;
 }
