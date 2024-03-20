@@ -1,6 +1,8 @@
 body {
   font-family: Verdana, sans-serif, Tahoma, Geneva;
   background-color: rgb(237, 229, 239);
+  display: flex;
+  flex-direction: column;
 }
 header {
   position: sticky; /* Add this line */
@@ -242,4 +244,42 @@ p {
 #waffle p:first-of-type {
   font-size: 25px;
   font-weight: bold;
+}
+
+#toparrowcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  margin: 30px;
+  font-size: 30px;
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(235, 159, 222, 0.5);
+  border-radius: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+#toparrowcontainer:hover{
+  background-color: rgba(
+    160,
+    106,
+    151,
+    0.5
+  );
+  transition: background-color 0.5s ease;
+}
+
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 150px;
+}
+footer a{
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+
 }
