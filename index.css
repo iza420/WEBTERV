@@ -96,7 +96,7 @@ header button a {
     106,
     151,
     0.5
-  ); /* Change the hover background color to your preference */
+  );
   transition: background-color 0.5s ease;
 }
 #adcontainer #rightside img {
@@ -107,7 +107,7 @@ h2 {
   font-weight: bold;
   margin: 7px;
 }
-h3{
+h3 {
   font-size: 35px;
   font-weight: bold;
   margin: 7px;
@@ -158,20 +158,20 @@ p {
   flex-direction: column;
 }
 
-#menucontainer{
+#menucontainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-#menucontainer #topcontainer{
+#menucontainer #topcontainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-#menucontainer #topcontainer a{
+#menucontainer #topcontainer a {
   color: rgba(235, 159, 222, 0.5);
   margin: none;
   text-decoration: none;
@@ -183,11 +183,63 @@ p {
 }
 
 #waffle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 30%;
   margin-bottom: 20px;
   background-color: white;
-  border-radius: 0px 50px
+  border-radius: 0px 50px;
 }
-#waffle p:first-of-type{
+.add-button{
+  border: none;
+  width: 135px;
+  height: 60px;
+  background-color: rgba(235, 159, 222, 0.5);
+  border-radius: 30px 30px 0px 30px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+.add-button:hover {
+  background-color: rgba(
+    160,
+    106,
+    151,
+    0.5
+  );
+  transition: background-color 0.5s ease;
+}
+.imgdiv {
+  border-radius: 0px 50px 0px 0px;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+#imgdiv1 {
+  background-image: url("resources/fruitwaffle.jpg");
+}
+#imgdiv2 {
+  background-image: url("resources/belgianwaffles.jpg");
+}
+#imgdiv3 {
+  background-image: url("resources/gingerbreadwaffle.jpg");
+}
+#imgdiv4 {
+  background-image: url("resources/chocwaffle.png");
+}
+#imgdiv5 {
+  background-image: url("resources/heartwaffle.png");
+}
+#imgdiv6 {
+  background-image: url("resources/strawberrywaffle.jpg");
+}
+#waffle .imgdiv img {
+  height: 250px;
+}
+#waffle p:first-of-type {
   font-size: 25px;
+  font-weight: bold;
 }
