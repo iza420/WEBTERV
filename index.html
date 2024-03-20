@@ -6,28 +6,30 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
 
-  <body>
+  <body id="top">
     <header>
-      <ul>
-        <button><a href="cart.html">Cart</a></button>
-        <li id="index"><a href="index.html">Fluffy Stack Café</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="waffles.html">Waffles</a></li>
-      </ul>
+      <div id="logo">
+        <a href="index.html" id="index">Fluffy Stack Café</a>
+      </div>
+      <div id="headerlinks">
+        <a href="index.html">Home</a>
+        <a href="waffles.html">Waffles</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
     </header>
 
-    <div id="adcontainer" id="top">
+    <div id="adcontainer">
       <div id="leftside">
         <h2 id="ad">Your Favourite Waffles Delivered Hot & Fresh</h2>
         <p id="ad-description">
           Choose the healty alternative to your guilty pleasure with our freshy
           made waffles
         </p>
-        <div class="buttoncontainer">
-          <a href="/waffles.html" class="buttoncontent">Order Now →</a>
-        </div>
+        <a href="/waffles.html" class="buttoncontainer">
+          Order Now →
+        </a>
       </div>
       <div id="rightside">
         <img src="resources/waffel.png" alt="waffle" />
@@ -52,7 +54,7 @@
       </div>
     </div>
 
-    <div id="aboutcontainer" id="aboutus">
+    <div id="aboutcontainer">
       <img src="resources/strwbrwffl.png" alt="" />
       <div id="about">
         <p id="coloredtext">About</p>
@@ -69,9 +71,9 @@
           offering them to you. If you have any questions or comments, please
           don't hesitate to contact us. Sincerely, The Fluffy Stack Team
         </p>
-        <div class="buttoncontainer">
-          <a href="/waffles.html" class="buttoncontent">Learn More →</a>
-        </div>
+        <a href="/waffles.html" class="buttoncontainer">
+          Waffles →
+        </a>
       </div>
     </div>
 
@@ -149,19 +151,16 @@
       </div>
     </div>
 
-
-    <a href="#top" id="toparrowcontainer">
-         ↑
-   </a>
+    <a href="#top" id="toparrowcontainer"> ↑ </a>
 
     <footer>
       <a href="#top">Home</a>
-      <a href="waffles.html">Order</a> 
-      <a href="cart.html">Cart</a> 
-      <a href="login.html">Login</a> 
-      <a href="register.html">Register</a> 
-      <a href="#top">About us</a> 
-      <a href="#contactus">Contact us</a> 
+      <a href="waffles.html">Order</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="#aboutcontainer">About us</a>
+      <a href="#contactus">Contact us</a>
     </footer>
   </body>
 </html>

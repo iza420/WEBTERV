@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: Verdana, sans-serif, Tahoma, Geneva;
   background-color: rgb(237, 229, 239);
@@ -5,60 +8,36 @@ body {
   flex-direction: column;
 }
 header {
-  position: sticky; /* Add this line */
-  top: 0; /* Add this line */
+  position: sticky;
+  top: 0;
   background-color: rgba(235, 159, 222, 0.5);
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-
-header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-header li a {
-  display: block;
+header a {
   color: white;
-  text-align: center;
-  padding: 40px 40px;
   text-decoration: none;
-  float: right;
   font-size: 20px;
-  transition: text-decoration 0.3s ease-in-out;
+}
+header a:hover{
+  color: #111;
+  font-size: 22px;
+  transition: all 0.5s ease;
 }
 header #index {
-  font-size: 50px;
+  font-size: 25px;
   float: left;
+  padding-left: 25px;
+}
+#headerlinks{
+  display: flex;
+  padding-right: 25px;
+  gap: 30px;
 }
 
-li a:hover {
-  font-style: italic;
-}
-
-header button {
-  text-align: center;
-  padding: 10px 40px;
-  float: right;
-  border: none;
-  font-size: 20px;
-  border-radius: 25px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  margin: 27px 10px;
-  background-color: pink;
-  transition: box-shadow 0.3s ease-in-out;
-}
-header button:hover {
-  box-shadow: 7px 5px 20px 0px #111;
-}
-header button a {
-  text-decoration: none;
-  font-family: Geneva, Tahoma, sans-serif;
-  color: white;
-}
 
 #adcontainer {
   display: flex;
@@ -74,24 +53,22 @@ header button a {
 #adcontainer #leftside #ad {
   margin-bottom: 5px;
 }
-.buttoncontent {
-  color: #504d4d;
-  text-decoration: none;
-}
+
 .buttoncontainer {
   display: flex;
-  align-items: center;
+  align-items:center ;
   justify-content: center;
-  width: 135px;
-  height: 60px;
+  color:#2c2a2a ;
+  font-size: 17px;
+  text-decoration: none;
+  width: 150px;
+  height: 70px;
   background-color: rgba(235, 159, 222, 0.5);
-  border-radius: 30px;
-  text-align: center;
-  align-items: center;
+  border-radius: 35px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  margin-top: 7px;
 }
+
 .buttoncontainer:hover {
   background-color: rgba(
     160,
@@ -182,6 +159,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 0% 10%;
 }
 
 #waffle {
@@ -189,7 +167,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   width: 30%;
-  margin-bottom: 20px;
+  margin: 40px 10px;
   background-color: white;
   border-radius: 0px 50px;
 }
@@ -259,7 +237,6 @@ p {
   background-color: rgba(235, 159, 222, 0.5);
   border-radius: 50px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 #toparrowcontainer:hover{
   background-color: rgba(
@@ -271,11 +248,14 @@ p {
   transition: background-color 0.5s ease;
 }
 
+
 footer{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 150px;
+  background-color: rgba(235, 159, 222, 0.5);
+
 }
 footer a{
   text-decoration: none;
