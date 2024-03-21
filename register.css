@@ -1,4 +1,8 @@
-
+body {
+    font-family: Verdana, sans-serif, Tahoma, Geneva;
+    background-color: rgb(237, 229, 239);
+    
+}
 /*csak egy példa formázás*/
 .background {
     position: fixed;
@@ -6,17 +10,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('resources/bgforloginandregister.png');
-    background-size: cover;
-    filter: blur(5px);
+    background-image: url('resources/waffleregister1.jpg');
+    background-size: 1920px 953px;
+    filter: blur(4px) brightness(50%);
     z-index: -1;
 }
 
 
 #reg-form {
-    background: #dcbdbd;
-    border: 1px solid #8f29e9;
-    width: 400px;
+    background: rgb(237, 229, 239);
+    width: 500px;
+    height: 700px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
