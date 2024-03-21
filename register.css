@@ -1,67 +1,124 @@
-body {
+body{
     font-family: Verdana, sans-serif, Tahoma, Geneva;
     background-color: rgb(237, 229, 239);
-    
+    font-size: 25px;
 }
-/*csak egy példa formázás*/
-.background {
+#background{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('resources/loginbg.png');
+    background-size: cover;
+    filter: blur(4px) brightness(50%);
+    z-index: -1;
+}
+#formcontainer {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('resources/waffleregister1.jpg');
-    background-size: 1920px 953px;
-    filter: blur(4px) brightness(50%);
-    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-
-#reg-form {
-    background: rgb(237, 229, 239);
-    width: 500px;
-    height: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px; 
 }
-
-#reg-form label {
+#formcontainerinside{  
+    width: auto;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    flex-direction: row;
+    background-color: rgb(237, 229, 239);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    overflow: hidden;
+    margin:50px;  
+}
+#form{
+    font-size: 80%;
+    width: 450px;
+    color: #504d4d;
+    margin: 20px;
+    text-align: center;
+    z-index: 1;
+}
+#form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: bold;
+    text-align: left;
 }
-
-#reg-form input {
+#form input {
     width: calc(100% - 10px);
+    height: 30px;
     padding: 5px;
     margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(235, 159, 222, 0.5);
 }
-
-#reg-form select {
-    width: calc(100% + 4px);
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-#reg-form textarea {
+#form textarea {
     width: calc(100% - 8px);
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
-
-input[type="submit"] {
-    width: 200px;
-    height: 50px;
-    background-color: #590e2d;
+#submit{
+    width: 130px;
+    height: 70px;
+    background-color: rgba(235, 159, 222, 0.5);
     border-radius: 15px;
     color: white;
     display: block;
     margin: 10px auto 0 auto;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 30px;
 }
-
-input[type="submit"]:hover {
-    background-color: #9d56b1;
+#submit:hover{
+    background-color: rgba(160,106,151,0.5);
+}
+#image{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#gobackbutton {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    font-size: 30px;
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(236, 194, 230, 1); 
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1;
+}
+#gobackbutton:hover {
+    background-color: rgba(160, 106, 151, 0.5);
+    transition: background-color 0.5s ease;
 }

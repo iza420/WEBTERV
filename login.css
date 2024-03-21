@@ -1,4 +1,4 @@
-body {
+body{
     font-family: Verdana, sans-serif, Tahoma, Geneva;
     background-color: rgb(237, 229, 239);
     font-size: 25px;
@@ -25,26 +25,19 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally */
-    justify-content: center; /* Center the content vertically */
+    align-items: center;
+    justify-content: center; 
 }
-
-
 h1{
-    position: center;
     text-align: center;
     margin-top: 80px;
-    margin-bottom: 80px;
-    
+    margin-bottom: 80px;  
 }
 h3{
-    position: center;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
-
 #formcontainerinside{  
     width: auto;
     align-items: stretch;
@@ -58,45 +51,47 @@ h3{
     overflow: hidden;
     margin:50px;
 }
-
+#forminside{
+    text-align: left;
+}
 #form{
-    font-size: 80%; /* Add this line */
+    font-size: 80%;
     width: 450px;
     color: #504d4d;
     margin: 20px;
     text-align: center;
 }
-#forminside{
-    text-align: left;
-}
-
 #form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    text-align: left;
 }
-
 #form input {
     width: calc(100% - 10px);
     height: 30px;
     padding: 5px;
     margin-bottom: 10px;
     border-radius: 5px;
+    background-color: rgba(235, 159, 222, 0.5);
 }
-
+#remember-me-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#remember-me-text {
+    margin-right: 10px;
+}
+input[type="checkbox"] {
+    width: auto;
+    height: auto;
+}
 #form textarea {
     width: calc(100% - 8px);
     padding: 5px;
     margin-bottom: 5px;
 }
-input[type="text"]{
-    background-color: rgba(235, 159, 222, 0.5);
-    border-radius: 50px;
-}
-input[type="password"]{
-    background-color: rgba(235, 159, 222, 0.5);
-}
-
 #submit{
     width: 130px;
     height: 70px;
@@ -114,17 +109,15 @@ input[type="password"]{
     background-color: rgba(160,106,151,0.5);
 }
 #image{
-    height: 100%; /* Add this line */
+    height: 100%;
     width: auto;
     object-fit: cover;
 }
-
 p{
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: left;
 }
-
 #gobackbutton {
     position: fixed;
     right: 0;
@@ -138,13 +131,12 @@ p{
     text-decoration: none;
     width: 100px;
     height: 100px;
-    background-color: rgba(236, 194, 230, 1); /* Make it not see-through */
+    background-color: rgba(236, 194, 230, 1);
     border-radius: 50px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    z-index: 1; /* Ensure the button is above the background */
+    z-index: 1; 
 }
-
 #gobackbutton:hover {
     background-color: rgba(160, 106, 151, 0.5);
     transition: background-color 0.5s ease;

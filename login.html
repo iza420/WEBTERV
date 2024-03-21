@@ -14,9 +14,12 @@
                 <h1>Welcome back!</h1>
                 <h3>Log in or Sign up for the wonderful waffles!</h3>
                  <form id="forminside" method="post">
-                        <label>Email:<input type="text" name="email" required></label>
-                        <label>Password:<input type="password" name="passwd" required></label>
-                        <p>Remember Me</p>
+                        <label>Email: <input type="text" name="email" required></label>
+                        <label>Password: <input type="password" name="passwd" required></label>
+                        <div id="remember-me-container">
+                            <label id="remember-me-text" for="checkbox">Remember Me</label>
+                            <input type="checkbox" id="remember-me-checkbox" name="remember-me">
+                        </div>
                         <button id="submit">Sign In</button>
                 </form>
                 <p>Don't have an account? <a href="register.html">Sign Up</a></p>
