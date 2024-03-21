@@ -7,21 +7,25 @@
     <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
-    <div class="background"></div>
-
-    <div class="modal">
-        <div class="sidebar">
-        <h1>Welcome back!</h1>
-        <form method="post">
-            <input type="text" name="email" placeholder="Email" required/> <br/><br/>
-            <input type="password" name="passwd" placeholder="Password" required/> <br/><br/>
-            <input type="submit" value="Log in"/>
-        </form>
-        <input type="checkbox" id="remember" name="remember"><label for="remember">Remember Me</label><br>
-        
-        <p>Don't have an account? <a href="register.html">Sign up</a></p>
+    <div id="background"></div>
+    <div id="formcontainer">
+        <div id="formcontainerinside">
+            <div id="form">
+                <h1>Welcome back!</h1>
+                <h3>Log in or Sign up for the wonderful waffles!</h3>
+                 <form id="forminside" method="post">
+                        <label>Email:<input type="text" name="email" required></label>
+                        <label>Password:<input type="password" name="passwd" required></label>
+                        <p>Remember Me</p>
+                        <button id="submit">Sign In</button>
+                </form>
+                <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+            </div>
+            <div>
+                <img id="image" src="resources/wafflelogin2.jpg" alt="">
+            </div>
         </div>
-        <div class="image"></div>
     </div>
+    <a href="index.html" id="gobackbutton">←</a>
 </body>
 </html>

@@ -1,37 +1,151 @@
-.background {
+body {
+    font-family: Verdana, sans-serif, Tahoma, Geneva;
+    background-color: rgb(237, 229, 239);
+    font-size: 25px;
+}
+#background{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('resources/loginbg.png');
+    background-size: cover;
+    filter: blur(4px) brightness(50%);
+    z-index: -1;
+}
+#formcontainer {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('resources/waffles.png');
-    background-size: cover;
-    filter: blur(20px);
-    z-index: -1;
-}
-
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1200px;
-    height: 810px;
-    background: rgba(252, 246, 246, 0.8);
     display: flex;
-    border-radius: 15px;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+}
+
+
+h1{
+    position: center;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    
+}
+h3{
+    position: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+#formcontainerinside{  
+    width: auto;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    flex-direction: row;
+    background-color: rgb(237, 229, 239);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin:50px;
 }
 
-.sidebar {
-    width: 33.33%;
-    background: #f5f5f5;
-    padding: 20px;
+#form{
+    font-size: 80%; /* Add this line */
+    width: 450px;
+    color: #504d4d;
+    margin: 20px;
+    text-align: center;
+}
+#forminside{
+    text-align: left;
 }
 
-.image {
-    flex: 1; /* A kép területe legyen rugalmas */
-    background: url('resources/wafflelogin1.jpg') no-repeat center center;
-    background-size: contain; /* Teljes kép látható, de megtartja az arányokat */
+#form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#form input {
+    width: calc(100% - 10px);
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#form textarea {
+    width: calc(100% - 8px);
+    padding: 5px;
+    margin-bottom: 5px;
+}
+input[type="text"]{
+    background-color: rgba(235, 159, 222, 0.5);
+    border-radius: 50px;
+}
+input[type="password"]{
+    background-color: rgba(235, 159, 222, 0.5);
+}
+
+#submit{
+    width: 130px;
+    height: 70px;
+    background-color: rgba(235, 159, 222, 0.5);
+    border-radius: 15px;
+    color: white;
+    display: block;
+    margin: 10px auto 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 30px;
+
+}
+#submit:hover{
+    background-color: rgba(160,106,151,0.5);
+}
+#image{
+    height: 100%; /* Add this line */
+    width: auto;
+    object-fit: cover;
+}
+
+p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+#gobackbutton {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    font-size: 30px;
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(236, 194, 230, 1); /* Make it not see-through */
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1; /* Ensure the button is above the background */
+}
+
+#gobackbutton:hover {
+    background-color: rgba(160, 106, 151, 0.5);
+    transition: background-color 0.5s ease;
 }

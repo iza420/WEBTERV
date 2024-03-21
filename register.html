@@ -4,31 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
     
 </head>
 <body>
-    <header>
-        <ul>
-            <button><a href="cart.html">Cart</a></button>
-            <li id="index"><a href="index.html">Fluffy Stack Café</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="waffles.html">Waffles</a></li>
+    <div class="background"></div>
+    <div id="reg-form">
+        <form method="post">
             
-        </ul>
-    </header>
-    <form method="post">
-        <fieldset>
-            <legend>Regisztrációs adatok</legend>
-            <label>First name: <input type="text" name="fname" size="25"/></label> <br/>
-            <label>Last name: <input type="text" name="lname" size="25"/></label> <br/>
-            <label>Password: <input type="password" name="passwd" required/></label> <br/>
-            <label>Password again: <input type="password" name="passwd-check" required/></label> <br/>
-            <label>Phone number <input type="tel" name="phone-number" placeholder="+36-xx-xxx-xxxx" pattern="\+36-[0-9]{2}-[0-9]{3}-[0-9]{4}" required title="Format: +36-xx-xxx-xxxx"></label> <br/>
-            <label>E-mail: <input type="email" name="email" required/></label> <br/>
-            <label>Registration  <input type="submit" value="Submit"></label>
-          </fieldset>
-    </form>
+                <legend><h2>Sign up</h2></legend>
+                <label>First name: <input type="text" name="fname" size="25"/></label> <br/>
+                <label>Last name: <input type="text" name="lname" size="25"/></label> <br/>
+                <label>Password: <input type="password" name="passwd" required/></label> <br/>
+                <label>Password again: <input type="password" name="passwd-check" required/></label> <br/>
+                <label>Phone number <input type="tel" name="phone-number" placeholder="36-xx-xxx-xxxx" pattern="\36-[0-9]{2}-[0-9]{3}-[0-9]{4}" required title="Format: +36-xx-xxx-xxxx"></label> <br/>
+                <label>E-mail: <input type="email" name="email" required/></label> <br/>
+                <label>One click and you are done!  <input type="submit" value="Sign up"></label>
+            
+        </form>
+    </div>
+    
 </body>
 </html>
