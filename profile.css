@@ -2,10 +2,10 @@ html{
   scroll-behavior: smooth;
 }
 body {
-    font-family: Verdana, sans-serif, Tahoma, Geneva;
-    background-color: rgb(237, 229, 239);
-    display: flex;
-    flex-direction: column;
+  font-family: Verdana, sans-serif, Tahoma, Geneva;
+  background-color: rgb(237, 229, 239);
+  display: flex;
+  flex-direction: column;
 }
 header {
   position: sticky;
@@ -49,50 +49,44 @@ header #index {
 #personalinfo{
   background-color: rgba(160, 106, 151, 0.5);
 }
-h2{
+h2 {
   align-self: center;
-  margin-top: 30px;
+  margin-top: 60px
 }
-p{
+p {
   text-align: center;
 }
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 5px;
 }
-
 .form {
   display: flex;
   flex-direction: column;
   width: 50%;
   padding: 20px;
-  margin: 20px;
   background: linear-gradient(to bottom, rgba(235, 159, 222, 0.5), rgb(241, 238, 243));
   border-radius: 30px;
 }
-
 .form label {
   margin-bottom: 5px;
-  align-self: flex-start; /* új sor */
+  align-self: flex-start;
 }
-
 .form input, .form select {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid #ccc;
-  width: calc(100% - 10px); /* az inputok 100%-a levonva a paddingot */
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: calc(100% - 10px);
 }
-
 .form .row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .form .row .col {
   width: 48%;
 }
@@ -112,28 +106,29 @@ p{
   background-color: rgba(160, 106, 151, 0.5);
   transition: background-color 0.5s ease;
 }
-#gobackbutton {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px;
-    font-size: 30px;
-    text-decoration: none;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(236, 194, 230, 1);
-    border-radius: 50px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 1; 
+#previous-orders {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom, rgba(235, 159, 222, 0.5), rgb(241, 238, 243));
+  border-radius: 30px;
 }
-#gobackbutton:hover {
-    background-color: rgba(160, 106, 151, 0.5);
-    transition: background-color 0.5s ease;
+#orders-list {
+  margin-top: 10px;
+}
+.order {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#no-orders-message {
+  display: none;
+}
+#orderhistory{
+  text-align: left;
 }
 footer{
   display: flex;
@@ -141,11 +136,9 @@ footer{
   align-items: center;
   height: 150px;
   background-color: rgba(235, 159, 222, 0.5);
-
 }
 footer a{
   text-decoration: none;
   color: #111;
   font-weight: bold;
-
 }
