@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+          <a href="index.html" id="index">Fluffy Stack Café</a>
+        </div>
+        <div id="headerlinks">
+          <a href="index.html">Home</a>
+          <a href="waffles.html">Waffles</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+          <a href="cart.html"><img src="resources/cart.png" alt="cart"></a>
+        </div>
+      </header>
+
+      <h2>Admin Page</h2>
+      <form id="waffleForm" method="post" enctype="multipart/form-data">
+          <div>
+              <label for="waffleName">Waffle Name:</label>
+              <input type="text" id="waffleName" name="waffleName" required>
+          </div>
+          <div>
+              <label for="wafflePrice">Waffle Price:</label>
+              <input type="number" id="wafflePrice" name="wafflePrice" step="0.01" required>
+          </div>
+          <div>
+              <label for="waffleIngredients">Waffle Ingredients:</label>
+              <textarea id="waffleIngredients" name="waffleIngredients" required></textarea>
+          </div>
+          <div>
+              <label for="additionalToppings">Additional Toppings:</label>
+              <textarea id="additionalToppings" name="additionalToppings"></textarea>
+          </div>
+          <div>
+              <label for="waffleImage">Waffle Image:</label>
+              <input type="file" id="waffleImage" name="waffleImage" accept="image/*">
+          </div>
+          <button type="submit">Save Waffle</button>
+      </form>
+  
+
+
+      <footer>
+        <a href="#top">Home</a>
+        <a href="waffles.html">Order</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="#aboutcontainer">About us</a>
+        <a href="#contactus">Contact us</a>
+      </footer>
+    
+</body>
+</html>
