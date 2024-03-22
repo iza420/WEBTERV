@@ -3,11 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="profile.css" />
 </head>
 <body>
-    <form>
-        
-    </form>
+    <header>
+        <div id="logo">
+          <a href="index.html" id="index">Fluffy Stack Café</a>
+        </div>
+        <div id="headerlinks">
+          <a href="index.html">Home</a>
+          <a href="waffles.html">Waffles</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+          <a href="cart.html"><img src="resources/cart.png" alt="cart"></a>
+        </div>
+      </header>
+    <h2>Profile</h2>
+    <p>Personal data and shipping address</p>
+    <div class="container">
+      <form class="form">
+          <div class="row">
+              <div class="col">
+                  <label for="firstName">First name:</label>
+                  <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="col">
+                  <label for="lastName">Last name:</label>
+                  <input type="text" id="lastName" name="lastName" required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="col">
+                  <label for="phone">Phone number:</label>
+                  <input type="tel" id="phone" name="phone">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label for="country">Country:</label>
+                  <select id="country" name="country" required>
+                    <option value="">Choose from...</option>
+                    <option value="hungary">Hungary</option>
+                    <option value="romania">Romania</option>
+                </select>
+              </div>
+              <div class="col">
+                  <label for="zip">Postal code:</label>
+                  <input type="text" id="zip" name="zip" required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <label for="city">City:</label>
+                  <input type="text" id="city" name="city" required>
+              </div>
+              <div class="col">
+                  <label for="address">Address:</label>
+                  <input type="text" id="address" name="address">
+              </div>
+          </div>
+          <button type="submit">Save</button>
+      </form>
+  </div>
+    
+    <a href="index.html" id="gobackbutton">←</a>
+    <footer>
+      <a href="#top">Home</a>
+      <a href="waffles.html">Order</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="#aboutcontainer">About us</a>
+      <a href="#contactus">Contact us</a>
+    </footer>
 </body>
 </html>
