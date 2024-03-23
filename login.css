@@ -1,7 +1,9 @@
-body{
+html{
+    scroll-behavior: smooth;
+}
+body {
     font-family: Verdana, sans-serif, Tahoma, Geneva;
     background-color: rgb(237, 229, 239);
-    font-size: 2vw;
 }
 #background{
     position: absolute;
@@ -28,102 +30,98 @@ body{
     align-items: center;
     justify-content: center;
 }
-h1, h3 {
-    text-align: center;
-    margin-top: 4vw;
-    margin-bottom: 3vw;  
-}
-
 #formcontainerinside {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Flexbox elrendezés módosítása */
+    justify-content: space-between; 
     background-color: rgb(237, 229, 239);
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50px;
-    width: 70%;
+    width: 75%;
+    height: 80vh;
     overflow: hidden;
     margin: 5vw;
+}
+#form {
+    font-size: 80%;
+    width: 75%;
+    color: #504d4d;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    flex: 1;
+    text-align: left;
+    height: 100%;
+    overflow: auto;
+}
+h1 {
+    text-align: center;
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+    font-size: 2.5vw;
+}
+h2 {
+    text-align: center;
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+    font-size: 1.5vw;
 }
 #forminside{
     text-align: left;
     padding-left: 1vw;
     padding-right: 1vw;
 }
-
-#form {
-    font-size: 80%;
-    width: 34%; /* Módosítás: Fix szélesség helyett relatív */
-    color: #504d4d;
-    padding-left: 30px;
-    padding-right: 30px;
-    
-    flex: 1; /* A form rész foglalja el a rendelkezésre álló helyet */
-    text-align: left;
-    height: 100%;
-    overflow: auto;
-}
 #form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     text-align: left;
+    font-size: 1.3vw;
 }
 #form input {
     width: calc(100% - 10px);
-    height: 30px;
-    padding: 5px;
-    margin-bottom: 10px;
+    height: 1.5vw;
+    font-size: 1vw;
+    padding: 0.4vw 0.4vw 0.4vw 0.4vw;
+    margin-bottom: 2vw;
     border-radius: 10px;
-    border:none;
+    border: none;
     background-color: rgba(235, 159, 222, 0.5);
 }
-#remember-me-container {
+#rememberMeContainer {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-}
-#remember-me-text {
-    margin-right: 10px;
-}
-input[type="checkbox"] {
-    width: auto;
-    height: auto;
-}
-#form textarea {
-    width: calc(100% - 8px);
-    padding: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 #submit {
-    width: 10vw; /* Módosítás: a gomb szélességének beállítása a nézet szélességéhez viszonyítva */
-    height: 5vw; /* Módosítás: a gomb magasságának beállítása a nézet szélességéhez viszonyítva */
+    width: 10vw;
+    height: 5vw;
     background-color: rgba(235, 159, 222, 0.5);
     border-radius: 20px;
     color: white;
     display: block;
     border: none;
-    margin: 1vw auto 1vw auto; /* Módosítás: a gomb margójának beállítása a nézet szélességéhez viszonyítva */
+    margin: 2vw auto 2vw auto;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 2vw; /* Módosítás: a gomb szövegének betűméretének beállítása a nézet szélességéhez viszonyítva */
+    font-size: 2vw;
 }
-
 #submit:hover {
     background-color: rgba(160,106,151,0.5);
 }
+p {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    text-align: left;
+    font-size: 1.5vw;
+}
 #image{
-    flex: 1;
+    flex: 0.75;
 }
 #image img {
     width: 100%;
     object-fit: cover;
     height: 100%;
-}
-p{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: left;
 }
 #gobackbutton {
     position: fixed;
