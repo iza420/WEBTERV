@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
-    <div class="background"></div>
     <div id="background"></div>
     <div id="formcontainer">
         <div id="formcontainerinside">
@@ -15,7 +14,7 @@
                 <img src="resources/waffleregister.jpg" alt="">
             </div>
             <div id="form">
-                <form method="post">
+                <form id="forminside" method="post">
                     <h1>Sign up</h1>
                     <label>First name: <input type="text" name="fname" size="25"></label>
                     <label>Last name: <input type="text" name="lname" size="25"></label>
@@ -24,7 +23,8 @@
                     <label>Phone number: <input type="tel" name="phone-number" placeholder="36-xx-xxx-xxxx" pattern="\36-[0-9]{2}-[0-9]{3}-[0-9]{4}" required title="Format: +36-xx-xxx-xxxx"></label>
                     <label>E-mail: <input type="email" name="email" required></label>
                 </form>
-                <p>One click and you are done!<button id="submit">Sign In</button></p>
+                <p>One click and you are done!</p>
+                <button id="submit">Sign In</button>
             </div>
         </div>
     </div>

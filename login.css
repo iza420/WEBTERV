@@ -1,7 +1,7 @@
 body{
     font-family: Verdana, sans-serif, Tahoma, Geneva;
     background-color: rgb(237, 229, 239);
-    font-size: 25px;
+    font-size: 2vw;
 }
 #background{
     position: absolute;
@@ -28,16 +28,12 @@ body{
     align-items: center;
     justify-content: center;
 }
-h1 {
+h1, h3 {
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px;  
+    margin-top: 4vw;
+    margin-bottom: 3vw;  
 }
-h3 {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
+
 #formcontainerinside {
     display: flex;
     flex-wrap: wrap;
@@ -47,12 +43,12 @@ h3 {
     border-radius: 50px;
     width: 70%;
     overflow: hidden;
-    margin: 50px;
+    margin: 5vw;
 }
 #forminside{
     text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 #form {
@@ -65,6 +61,7 @@ h3 {
     flex: 1; /* A form rész foglalja el a rendelkezésre álló helyet */
     text-align: left;
     height: 100%;
+    overflow: auto;
 }
 #form label {
     display: block;
@@ -98,21 +95,21 @@ input[type="checkbox"] {
     padding: 5px;
     margin-bottom: 5px;
 }
-#submit{
-    width: 130px;
-    height: 70px;
+#submit {
+    width: 10vw; /* Módosítás: a gomb szélességének beállítása a nézet szélességéhez viszonyítva */
+    height: 5vw; /* Módosítás: a gomb magasságának beállítása a nézet szélességéhez viszonyítva */
     background-color: rgba(235, 159, 222, 0.5);
-    border-radius: 15px;
+    border-radius: 20px;
     color: white;
     display: block;
-    border:none;
-    margin: 10px auto 0 auto;
+    border: none;
+    margin: 1vw auto 1vw auto; /* Módosítás: a gomb margójának beállítása a nézet szélességéhez viszonyítva */
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 30px;
-
+    font-size: 2vw; /* Módosítás: a gomb szövegének betűméretének beállítása a nézet szélességéhez viszonyítva */
 }
-#submit:hover{
+
+#submit:hover {
     background-color: rgba(160,106,151,0.5);
 }
 #image{
@@ -139,13 +136,13 @@ p{
     margin: 30px;
     font-size: 30px;
     text-decoration: none;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(236, 194, 230, 1);
+    width: 10vh;
+    height: 10vh;
+    background-color: rgba(236, 194, 230, 1); 
     border-radius: 50px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    z-index: 1; 
+    z-index: 1;
 }
 #gobackbutton:hover {
     background-color: rgba(160, 106, 151, 0.5);
