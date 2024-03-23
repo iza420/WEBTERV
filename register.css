@@ -1,9 +1,10 @@
-body{
+body {
     font-family: Verdana, sans-serif, Tahoma, Geneva;
     background-color: rgb(237, 229, 239);
     font-size: 25px;
 }
-#background{
+
+#background {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +18,7 @@ body{
     filter: blur(4px) brightness(50%);
     z-index: -1;
 }
+
 #formcontainer {
     position: fixed;
     top: 0;
@@ -28,25 +30,27 @@ body{
     align-items: center;
     justify-content: center;
 }
-h1{
+
+h1 {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px; 
 }
-#formcontainerinside{  
-    width: auto;
-    align-items: stretch;
+
+#formcontainerinside {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    flex-direction: row;
+    justify-content: space-between; /* A gyerekek közötti tér igényeinek szabályozása */
+    align-items: stretch; /* A gyerekek nyújthatóak, hogy kitöltésre kerüljenek */
     background-color: rgb(237, 229, 239);
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50px;
     overflow: hidden;
-    margin:50px;  
+    width: 75%;
+    margin: 50px;
 }
-#form{
+
+#form {
     font-size: 80%;
     width: 450px;
     color: #504d4d;
@@ -54,51 +58,48 @@ h1{
     text-align: center;
     z-index: 1;
 }
+
 #form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     text-align: left;
 }
+
 #form input {
     width: calc(100% - 10px);
     height: 30px;
     padding: 5px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: none;
     background-color: rgba(235, 159, 222, 0.5);
 }
+
 #form textarea {
     width: calc(100% - 8px);
     padding: 5px;
     margin-bottom: 5px;
 }
-#submit{
+
+#submit {
     width: 130px;
     height: 70px;
     background-color: rgba(235, 159, 222, 0.5);
     border-radius: 15px;
     color: white;
     display: block;
+    border: none;
     margin: 10px auto 0 auto;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 30px;
 }
-#submit:hover{
+
+#submit:hover {
     background-color: rgba(160,106,151,0.5);
 }
-#image{
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-    z-index: -1;
-}
-p{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-}
+
 #gobackbutton {
     position: fixed;
     right: 0;
@@ -118,7 +119,22 @@ p{
     cursor: pointer;
     z-index: 1;
 }
+
 #gobackbutton:hover {
     background-color: rgba(160, 106, 151, 0.5);
     transition: background-color 0.5s ease;
+}
+ #image{
+    flex: 1;
+ }
+#image img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
 }

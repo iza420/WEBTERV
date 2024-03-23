@@ -26,40 +26,43 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 h1{
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 80px;  
+    margin-top: 60px;
+    margin-bottom: 60px;  
 }
 h3{
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
 }
-#formcontainerinside{  
-    width: auto;
-    align-items: stretch;
+#formcontainerinside {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    flex-direction: row;
+    justify-content: space-between; /* Flexbox elrendezés módosítása */
     background-color: rgb(237, 229, 239);
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50px;
+    width: 75%;
     overflow: hidden;
-    margin:50px;
+    margin: 50px;
 }
 #forminside{
     text-align: left;
 }
-#form{
+
+#form {
     font-size: 80%;
-    width: 450px;
+    width: 34%; /* Módosítás: Fix szélesség helyett relatív */
     color: #504d4d;
-    margin: 20px;
-    text-align: center;
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    flex: 1; /* A form rész foglalja el a rendelkezésre álló helyet */
+    text-align: left;
+    height: 100%;
 }
 #form label {
     display: block;
@@ -72,7 +75,8 @@ h3{
     height: 30px;
     padding: 5px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border:none;
     background-color: rgba(235, 159, 222, 0.5);
 }
 #remember-me-container {
@@ -99,6 +103,7 @@ input[type="checkbox"] {
     border-radius: 15px;
     color: white;
     display: block;
+    border:none;
     margin: 10px auto 0 auto;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -109,9 +114,13 @@ input[type="checkbox"] {
     background-color: rgba(160,106,151,0.5);
 }
 #image{
-    height: 100%;
-    width: auto;
-    object-fit: cover;
+    flex: 1;
+}
+#image img {
+    width: 100%;
+     /* Módosítás: Fix szélesség helyett relatív */
+    height: auto;
+    
 }
 p{
     margin-top: 50px;
