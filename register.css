@@ -1,7 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Verdana, sans-serif, Tahoma, Geneva;
     background-color: rgb(237, 229, 239);
-    font-size: 25px;
 }
 #background {
     position: absolute;
@@ -28,84 +30,84 @@ body {
     align-items: center;
     justify-content: center;
 }
-h1 {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px; 
-}
 #formcontainerinside {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Flexbox elrendezés módosítása */
+    justify-content: space-between;
     background-color: rgb(237, 229, 239);
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50px;
-    width: 70%;
+    width: 75%;
+    height: 80vh;
     overflow: hidden;
-    margin: 50px;
+    margin: 5vw;
+}
+#image{
+    flex: 0.7;  
+}
+#image img {
+    width: 100%;
+    object-fit:cover;
+    height: 100%; 
 }
 #form {
     font-size: 80%;
-    width: 34%; /* Módosítás: Fix szélesség helyett relatív */
+    width: 70%;
     color: #504d4d;
-    padding-left: 30px;
-    padding-right: 30px;
-    flex: 1; /* A form rész foglalja el a rendelkezésre álló helyet */
+    padding: 0 3vw 0 3vw;
+    flex: 1;
     text-align: left;
     height: 100%;
+    overflow: auto;
+}
+#forminside{
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+h1 {
+    text-align: center;
+    margin-top:  3vw;
+    margin-bottom: 2vw;
+    font-size: 2.5vw; 
 }
 #form label {
     display: block;
-    margin-bottom: 5px;
+    padding-bottom: 1vw;
     font-weight: bold;
     text-align: left;
+    font-size: 1.3vw
 }
-
 #form input {
     width: calc(100% - 10px);
-    height: 30px;
-    padding: 5px;
-    margin-bottom: 10px;
+    height: 1.5vw;
+    font-size: 1vw;
+    padding: 0.4vw 0.4vw 0.4vw 0.4vw;
+    margin-bottom: 1vw;
     border-radius: 10px;
     border: none;
     background-color: rgba(235, 159, 222, 0.5);
 }
-
-#form textarea {
-    width: calc(100% - 8px);
-    padding: 5px;
-    margin-bottom: 5px;
+p {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    text-align: center;
+    font-size: 1.5vw;
 }
-
 #submit {
-    width: 130px;
-    height: 70px;
+    width: 10vw;
+    height: 5vw;
     background-color: rgba(235, 159, 222, 0.5);
-    border-radius: 15px;
+    border-radius: 20px;
     color: white;
     display: block;
     border: none;
-    margin: 10px auto 0 auto;
+    margin: 2vw auto 2vw auto;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 30px;
+    font-size: 2vw;
 }
-
 #submit:hover {
     background-color: rgba(160,106,151,0.5);
-}
-#image{
-    flex: 1;
-}
-#image img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-}
-p {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
 }
 #gobackbutton {
     position: fixed;
@@ -118,8 +120,8 @@ p {
     margin: 30px;
     font-size: 30px;
     text-decoration: none;
-    width: 100px;
-    height: 100px;
+    width: 10vh;
+    height: 10vh;
     background-color: rgba(236, 194, 230, 1); 
     border-radius: 50px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
