@@ -91,6 +91,9 @@ h1 {
     transition: background-color 0.3s;
     font-size: 20px;
 }
+ a{
+    text-decoration: none;
+}
 #submit:hover {
     background-color: rgba(160,106,151,0.5);
 }
