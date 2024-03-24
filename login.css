@@ -87,10 +87,13 @@ h2 {
     border: none;
     background-color: rgba(235, 159, 222, 0.5);
 }
-#rememberMeContainer {
+#remembermecontainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#remembermecontainer input{
+    margin-bottom: 0.6vw;
 }
 #submit {
     width: 10vw;
@@ -100,7 +103,7 @@ h2 {
     color: white;
     display: block;
     border: none;
-    margin: 0 auto 0 auto;
+    margin: 0vw auto 0vw auto;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 2vw;
