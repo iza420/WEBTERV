@@ -160,16 +160,12 @@ p {
     #forminside{
         padding: 0px 20px 0px 20px;
     }
-    
     #image, #form {
         flex: 1;
         width: 100%;
     }
     #image{
         display: none;
-    }
-    #image img {
-        height: auto;
     }
     h1 {
         font-size: 25px;
