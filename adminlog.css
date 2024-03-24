@@ -84,7 +84,9 @@ h1 {
     background-color: rgba(235, 159, 222, 0.5);
     border-radius: 20px;
     color: white;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     margin: 20px auto 20px auto;
     cursor: pointer;

@@ -115,7 +115,7 @@ td img {
   display: flex;
   justify-self: center;
 }
-tr #img{
+tr .img{
   align-self: flex-start;
 }
 

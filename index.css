@@ -188,7 +188,7 @@ p {
   padding: 0% 0%;
 }
 
-#waffle {
+.waffle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -244,10 +244,10 @@ p {
 #imgdiv6 {
   background-image: url("resources/strawberrywaffle.jpg");
 }
-#waffle .imgdiv img {
+.waffle .imgdiv img {
   height: 250px;
 }
-#waffle p:first-of-type {
+.waffle p:first-of-type {
   font-size: 25px;
   font-weight: bold;
 }
@@ -302,7 +302,7 @@ p {
     flex-direction: column;
    }
   
-  #waffle {
+  .waffle {
     width: 45%;
   }
 }
@@ -320,7 +320,7 @@ p {
     font-size: 25px;
     padding-left: 0px;
   }
-  #waffle {
+  .waffle {
     width: 80%;
   }
   #adcontainer #leftside {
