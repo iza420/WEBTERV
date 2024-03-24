@@ -1,0 +1,166 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Verdana, sans-serif, Tahoma, Geneva;
+    background-color: rgb(237, 229, 239);
+}
+#background {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('resources/loginbg.png');
+    background-size: cover;
+    filter: blur(4px) brightness(30%);
+    z-index: -1;
+}
+#formcontainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#formcontainerinside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(237, 229, 239);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    width: 45%;
+    height: 55%;
+    overflow: hidden;
+}
+#form {
+    font-size: 80%;
+    width: 50%;
+    color: #504d4d;
+    padding: 0 40px 0 40px;
+    margin: 0 15px 0 15px;
+    flex: 1;
+    text-align: left;
+    height: 100%;
+    overflow: auto;
+}
+#forminside{
+    padding: 0px 25px 0px 25px;
+}
+h1 {
+    text-align: center;
+    margin-top:  40px;
+    margin-bottom: 30px;
+    font-size: 30px; 
+}
+#form label {
+    display: block;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 17px
+}
+#form input {
+    width: calc(100% - 10px);
+    height: 15px;
+    font-size: 10px;
+    padding: 4px 4px 4px 4px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(235, 159, 222, 0.5);
+}
+#submit {
+    width: 100px;
+    height: 50px;
+    background-color: rgba(235, 159, 222, 0.5);
+    border-radius: 20px;
+    color: white;
+    display: block;
+    border: none;
+    margin: 20px auto 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+#submit:hover {
+    background-color: rgba(160,106,151,0.5);
+}
+#gobackbutton {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    font-size: 30px;
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(236, 194, 230, 1); 
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 2;
+}
+#gobackbutton:hover {
+    background-color: rgba(160, 106, 151, 0.5);
+    transition: background-color 0.5s ease;
+}
+@media screen and (max-width: 1090px) {
+    #formcontainerinside {
+        flex-direction: row;
+        align-items: center;
+        height: 50%;
+        width: 60%;
+    }
+    #form{
+        width: 40%;
+        padding: 0px 10px 0px 0px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    p, #form label, #form input, #submit {
+        font-size: 15px;
+    }
+    #submit {
+        width: 100px;
+        height: 50px;
+    }
+    #gobackbutton{
+        display: none;
+    }
+}
+@media screen and (max-width: 720px) {
+    #formcontainerinside {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 90%;
+        padding: 20px;
+    }
+    #form{
+        margin: 0px;
+        width: 100%;
+    }
+    #forminside{
+        padding: 0px 10px 0px 10px;
+    }
+    #image{
+        display: none
+    }
+    #gobackbutton {
+        display: none;
+    }
+}
