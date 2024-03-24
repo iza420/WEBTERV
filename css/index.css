@@ -227,22 +227,22 @@ p {
   background-position: center;
 }
 #imgdiv1 {
-  background-image: url("resources/fruitwaffle.jpg");
+  background-image: url("../resources/fruitwaffle.jpg");
 }
 #imgdiv2 {
-  background-image: url("resources/belgianwaffles.jpg");
+  background-image: url("../resources/belgianwaffles.jpg");
 }
 #imgdiv3 {
-  background-image: url("resources/gingerbreadwaffle.jpg");
+  background-image: url("../resources/gingerbreadwaffle.jpg");
 }
 #imgdiv4 {
-  background-image: url("resources/chocwaffle.png");
+  background-image: url("../resources/chocwaffle.png");
 }
 #imgdiv5 {
-  background-image: url("resources/heartwaffle.png");
+  background-image: url("../resources/heartwaffle.png");
 }
 #imgdiv6 {
-  background-image: url("resources/strawberrywaffle.jpg");
+  background-image: url("../resources/strawberrywaffle.jpg");
 }
 .waffle .imgdiv img {
   height: 250px;
