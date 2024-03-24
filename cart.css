@@ -134,14 +134,14 @@ tr #img{
     border: none;
     width: 80px;
     height: 60px;
-    font-size: 15px;
+    font-size: 30px;
     color: #2c2a2a;
     background-color: rgba(235, 159, 222, 0.5);
     border-radius: 27px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
-  .add-button:hover {
+  .remove-button:hover {
     background-color: rgba(
       160,
       106,
