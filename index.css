@@ -66,61 +66,6 @@ footer a{
 
 }
 
-@media screen and (max-width: 1090px) {
-  header{
-    flex-direction: column;
-    justify-content: center;
-  }
-  header #index {
-    padding-left: 0px;
-  }
-  #adcontainer {
-    display: flex;
-    flex-direction: column;
-    padding: 5% 0%;
-  }
-
-  #adcontainer #rightside img {
-    width: 400px;
-  }
-  #infocontainer{
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-   #aboutcontainer{
-    flex-direction: column;
-   }
-  
-  #waffle {
-    width: 45%;
-  }
-}
-@media screen and (max-width: 720px) {
-  #headerlinks{
-    flex-direction: column;
-    padding: 0px;
-  }
-  header{
-    height: 400px;
-    position: relative;
-    gap: 20px;
-  }
-  header #index {
-    font-size: 25px;
-    padding-left: 0px;
-  }
-  #waffle {
-    width: 80%;
-  }
-  footer{
-    flex-direction: column;
-    gap: 10px;
-    height: 220px;
-  
-  }
-}
-
 #adcontainer {
   display: flex;
   align-items: center;
@@ -331,5 +276,60 @@ p {
   transition: background-color 0.5s ease;
 }
 
+
+@media screen and (max-width: 1090px) {
+  header{
+    flex-direction: column;
+    justify-content: center;
+  }
+  header #index {
+    padding-left: 0px;
+  }
+  #adcontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0%;
+  }
+
+  #adcontainer #rightside img {
+    width: 400px;
+  }
+  #infocontainer{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+   #aboutcontainer{
+    flex-direction: column;
+   }
+  
+  #waffle {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 720px) {
+  #headerlinks{
+    flex-direction: column;
+    padding: 0px;
+  }
+  header{
+    height: 400px;
+    position: relative;
+    gap: 20px;
+  }
+  header #index {
+    font-size: 25px;
+    padding-left: 0px;
+  }
+  #waffle {
+    width: 80%;
+  }
+  footer{
+    flex-direction: column;
+    gap: 10px;
+    height: 220px;
+  
+  }
+}
 
 
