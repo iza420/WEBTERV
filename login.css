@@ -37,7 +37,7 @@ body {
     background-color: rgb(237, 229, 239);
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50px;
-    width: 75%;
+    width: 70%;
     height: 80%;
     overflow: hidden;
     margin: 50px;
@@ -66,7 +66,7 @@ h2 {
 }
 #forminside{
     text-align: left;
-    padding: 0px 25px 0px 25px;
+    padding: 0px 30px 0px 30px;
 }
 #form label {
     display: block;
@@ -146,26 +146,28 @@ p {
     background-color: rgba(160, 106, 151, 0.5);
     transition: background-color 0.5s ease;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 1090px) {
     #formcontainerinside {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         height: auto;
         width: 90%;
-        padding: 20px;
     }
-    #form{
+    #form {
+        width: 40%;
         padding: 0px 0px 0px 0px;
     }
-    #forminside{
-        padding: 0px 20px 0px 20px;
-    }
-    #image, #form {
+    #image {
         flex: 1;
-        width: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
     }
-    #image{
-        display: none;
+    #image img {
+        width: 100%;
+        height: auto;
     }
     h1 {
         font-size: 25px;
@@ -181,7 +183,43 @@ p {
         width: 100px;
         height: 50px;
     }
-    #gobackbutton{
+    #gobackbutton {
         display: none;
+    }
+}
+@media screen and (max-width: 862px){
+    #image {
+        flex: 1;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        padding: 10px;
+        margin-right: 5px;
+    }
+    #image img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+@media screen and (max-width: 720px) {
+    #formcontainerinside {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 90%;
+        padding: 20px;
+    }
+    #form{
+        width: 100%;
+    }
+    #forminside{
+        padding: 0px 20px 0px 20px;
+    }
+    #image{
+        display: none
     }
 }
