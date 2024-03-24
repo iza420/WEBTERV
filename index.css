@@ -10,7 +10,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background-color: rgba(235, 159, 222, 0.5);
+  background-color: rgba(235, 159, 222, 0.8);
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -46,7 +46,80 @@ header #index {
   padding-right: 25px;
   gap: 30px;
 }
+#headerlinks a:first-of-type{
+  color: #111;
+  font-size: 22px;
+}
 
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 150px;
+  background-color: rgba(235, 159, 222, 0.5);
+
+}
+footer a{
+  text-decoration: none;
+  color: #504d4d;
+  font-weight: bold;
+
+}
+
+@media screen and (max-width: 1090px) {
+  header{
+    flex-direction: column;
+    justify-content: center;
+  }
+  header #index {
+    padding-left: 0px;
+  }
+  #adcontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0%;
+  }
+
+  #adcontainer #rightside img {
+    width: 400px;
+  }
+  #infocontainer{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+   #aboutcontainer{
+    flex-direction: column;
+   }
+  
+  #waffle {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 720px) {
+  #headerlinks{
+    flex-direction: column;
+    padding: 0px;
+  }
+  header{
+    height: 400px;
+    position: relative;
+    gap: 20px;
+  }
+  header #index {
+    font-size: 25px;
+    padding-left: 0px;
+  }
+  #waffle {
+    width: 80%;
+  }
+  footer{
+    flex-direction: column;
+    gap: 10px;
+    height: 220px;
+  
+  }
+}
 
 #adcontainer {
   display: flex;
@@ -150,23 +223,24 @@ p {
 
 #menucontainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5% 7%;
 }
 
-#menucontainer #topcontainer {
+#topcontainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 #wafflecontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 0% 10%;
+  padding: 0% 0%;
 }
 
 #waffle {
@@ -258,17 +332,4 @@ p {
 }
 
 
-footer{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 150px;
-  background-color: rgba(235, 159, 222, 0.5);
 
-}
-footer a{
-  text-decoration: none;
-  color: #111;
-  font-weight: bold;
-
-}

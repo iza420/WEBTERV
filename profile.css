@@ -51,7 +51,9 @@ header #index {
 }
 h2 {
   align-self: center;
-  margin-top: 60px
+  margin-top: 60px;
+  color: #504d4d;
+
 }
 p {
   text-align: center;
@@ -143,7 +145,12 @@ footer a{
   color: #111;
   font-weight: bold;
 }
- 
+
+table caption {
+  color: #c578cf;
+  margin: 10px;
+}
+
 tbody img {
   width: 51px;
 }
@@ -153,7 +160,9 @@ table {
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+  margin-bottom:40 px;
   gap: 15px;
+
 }
 
 tbody {
@@ -162,23 +171,24 @@ tbody {
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
   gap: 30px;
+  background-color: rgba(235, 159, 222, 0.5);
 }
 
 tbody tr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding:0px 20px 0px 0px;
   height: 150px;
   width: 100%;
-  gap:10px;
+  gap: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 40px;
 }
 
-tbody #ingredients {
+tbody .ingredients {
   width: 300px;
 }
 
@@ -193,29 +203,18 @@ td img {
 tr #img{
   align-self: flex-start;
 }
-  #toparrowcontainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-end;
-    margin: 30px;
-    font-size: 30px;
-    text-decoration: none;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(235, 159, 222, 0.5);
-    border-radius: 50px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+  tr td{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
   }
-  #toparrowcontainer:hover{
-    background-color: rgba(
-      160,
-      106,
-      151,
-      0.5
-    );
-    transition: background-color 0.5s ease;
+
+  tr td .toppings{
+      margin: 0%;
   }
+
   td button{
     border: none;
     width: 80px;
@@ -237,20 +236,140 @@ tr #img{
     transition: background-color 0.5s ease;
   }
 
-  tr td{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-  }
-
-  tr td #toppings{
-      margin: 0%;
-  }
-
-  @media screen and (max-width: 1090px) {
+  @media screen and (max-width: 950px) {
     .ingredients {
       display: none;
     }
   }
+  @media screen and (max-width: 700px) {
+    .toppings {
+      display: none;
+    }
+    label{
+      display: none;
+    }
+  }
+      #toparrowcontainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-end;
+      margin: 30px;
+      font-size: 30px;
+      text-decoration: none;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(235, 159, 222, 0.5);
+      border-radius: 50px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    #toparrowcontainer:hover{
+      background-color: rgba(
+        160,
+        106,
+        151,
+        0.5
+      );
+      transition: background-color 0.5s ease;
+    }
+
+
+  header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(235, 159, 222, 0.8);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  header img{
+    width: 40px;
+  }
+  header img:hover{
+    width: 50px;
+    transition: all 0.5s ease;
+  }
+  header a:hover{
+    color: #111;
+    font-size: 22px;
+    transition: all 0.5s ease;
+  }
+  header #index {
+    font-size: 25px;
+    float: left;
+    padding-left: 25px;
+  }
+  #headerlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 25px;
+    gap: 30px;
+  }
+  #headerlinks #current{
+    color: #111;
+    font-size: 22px;
+  }
+  
+  footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    background-color: rgba(235, 159, 222, 0.5);
+  
+  }
+  footer a{
+    text-decoration: none;
+    color: #504d4d;
+    font-weight: bold;
+  
+  }
+  
+
+@media screen and (max-width: 1090px) {
+  header{
+    flex-direction: column;
+    justify-content: center;
+  }
+  header #index {
+    padding-left: 0px;
+  }
+  .ingredients{
+    display: none;
+  }
+}
+@media screen and (max-width: 720px) {
+  #headerlinks{
+    flex-direction: column;
+    padding: 0px;
+  }
+  header{
+    height: 400px;
+    position: relative;
+    gap: 20px;
+  }
+  header #index {
+    font-size: 25px;
+    padding-left: 0px;
+  }
+  footer{
+    flex-direction: column;
+    gap: 10px;
+    height: 220px;
+  }
+  tbody{
+    padding: 10px;
+  }
+  .toppings{
+    display: none;
+  }
+}
   
