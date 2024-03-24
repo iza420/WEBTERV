@@ -191,4 +191,7 @@ p {
     #image{
         display: none
     }
+    #gobackbutton {
+        display: none;
+    }
 }
