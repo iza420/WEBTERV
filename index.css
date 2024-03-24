@@ -288,7 +288,6 @@ p {
   #adcontainer {
     display: flex;
     flex-direction: column;
-    padding: 5% 0%;
   }
 
   #adcontainer #rightside img {
@@ -323,6 +322,12 @@ p {
   }
   #waffle {
     width: 80%;
+  }
+  #adcontainer #leftside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 85%;
   }
   footer{
     flex-direction: column;
