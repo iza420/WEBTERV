@@ -1,0 +1,154 @@
+html{
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: Verdana, sans-serif, Tahoma, Geneva;
+    background-color: rgb(237, 229, 239);
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(235, 159, 222, 0.5);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  header img{
+    width: 40px;
+  }
+  header img:hover{
+    width: 50px;
+    transition: all 0.5s ease;
+  }
+  header a:hover{
+    color: #111;
+    font-size: 22px;
+    transition: all 0.5s ease;
+  }
+  header #index {
+    font-size: 25px;
+    float: left;
+    padding-left: 25px;
+  }
+  #headerlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 25px;
+    gap: 30px;
+  }
+
+.chat-container {
+    display: flex;
+   
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat{
+    display: flex;
+    width: 60%;
+}
+
+.sidebar {
+    
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.received {
+    background-color: #e1ffc7;
+    align-self: flex-start;
+}
+
+.sent {
+    background-color: #c7e7ff;
+    align-self: flex-end;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-box button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.input-box button:hover {
+    background-color: #0056b3;
+}
