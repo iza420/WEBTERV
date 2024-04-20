@@ -51,14 +51,14 @@ html{
 
   .chat-container {
     display: flex;
+    width: 70%;
+    height: 80%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
     align-self: center;
-    width: 70%;
-    height: 80%;
     margin: 20px 0px 20px 0px;
  
 }
