@@ -12,10 +12,8 @@ session_start();
 
   <title>Cart</title>
 </head>
-
 <body id="top">
 <?php include 'navbar.php'; ?>
-
   <table>
     <caption>
       <h2>Cart</h2>

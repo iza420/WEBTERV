@@ -9,23 +9,6 @@
   <body>
   <?php include 'navbar.php'; ?>
     <h2>Profile</h2>
-
-    <div class="profile-picture">
-        <h3>Upload Profile Picture</h3>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
-        </form>
-    </div>
-    
-    
-    <div class="profile-image-container">
-        <div class="profile-image">
-            <img src="uploads/kiscica.jpg" alt="Profile Picture" id="uploadedProfileImage">
-        </div>
-    </div>
-
     <div class="container">
       <p>Personal data and shipping address</p>
       <form class="form">
@@ -79,21 +62,27 @@
     <h2>Order history</h2>
         <table>
         <tbody>
-      <?php
-      $file = fopen("previous_orders.txt", "r");
-      if ($file) {
-          while (($line = fgets($file)) !== false) {
-              $waffleName = trim($line);
-              echo "<tr>";
-              echo "<td class='name'>" . $waffleName . "</td>";
-              echo "<td> <button class='add-button'>Reorder</button></td>";
-              echo "</tr>";
-          }
-          fclose($file);
-      } else {
-          echo "<tr><td>Error: Unable to open previous_orders.txt.</td></tr>";
-      }
-      ?>
+        <?php
+$file = fopen("previous_orders.txt", "r");
+if ($file) {
+    while (($line = fgets($file)) !== false) {
+        $waffleName = trim($line);
+        echo "<tr>";
+        echo "<td class='name'>" . $waffleName . "</td>";
+        echo "<td>";
+        echo "<form action='addprevioustocart.php' method='post'>";
+        echo "<input type='hidden' name='waffleName' value='" . $waffleName . "'/>";
+        echo "<button type='submit' class='add-button'>Reorder</button>";
+        echo "</form>";
+        echo "</td>";
+        echo "</tr>";
+    }
+    fclose($file);
+} else {
+    echo "<tr><td>Error: Unable to open previous_orders.txt.</td></tr>";
+}
+?>
+
     </tbody>
         </table>
       <p id="no-orders-message">You haven't ordered yet.</p>
