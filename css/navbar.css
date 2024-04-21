@@ -1,45 +1,48 @@
 header {
-    position: sticky;
-    top: 0;
-    background-color: rgba(235, 159, 222, 0.5);
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  header a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  header img {
-    width: 40px;
-  }
-  
-  header img:hover {
-    width: 50px;
-    transition: all 0.5s ease;
-  }
-  
-  header a:hover {
-    color: #111;
-    font-size: 22px;
-    transition: all 0.5s ease;
-  }
-  
-  header #index {
-    font-size: 25px;
-    float: left;
-    padding-left: 25px;
-  }
-  
-  #headerlinks {
-    display: flex;
-    align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: rgba(235, 159, 222, 0.8);
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+header img{
+  width: 40px;
+}
+header img:hover{
+  width: 50px;
+  transition: all 0.5s ease;
+}
+header a:hover{
+  color: #111;
+  font-size: 22px;
+  transition: all 0.5s ease;
+}
+header #index {
+  font-size: 25px;
+  float: left;
+  padding-left: 25px;
+}
+#headerlinks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 25px;
+  gap: 30px;
+}
+@media screen and (max-width: 1090px) {
+  header{
+    flex-direction: column;
     justify-content: center;
-    padding-right: 25px;
-    gap: 30px;
   }
+  header #index {
+    padding-left: 0px;
+  }
+}
