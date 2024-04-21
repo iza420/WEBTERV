@@ -49,7 +49,7 @@ if ($file) {
           <td class="price"><?php echo $data[1]; ?>$</td>
           <td>
             <label class="toppings">Additional Toppings:</label>
-            <select class="toppings">
+            <select name="topping" class="toppings">
               <option value="none" selected>Choose Additional Topping:</option>
               <?php
               $toppingsArray = explode(",", $data[3]);
@@ -59,9 +59,19 @@ if ($file) {
               ?>
             </select>
           </td>
-          <td><button class="add-button">+</button></td>
+          <td>
+            <form action="addToCart.php" method="post">
+              <input type="hidden" name="name" value="<?php echo $data[0]; ?>">
+              <input type="hidden" name="img" value="<?php echo $data[4]; ?>">
+              <input type="hidden" name="price" value="<?php echo $data[1]; ?>">
+              <input type="hidden" name="topping" value="<?php echo $topping; ?>">
+              <button type="submit" class="add-button">+</button>
+            </form>
+
+          </td>
         </tr>
       <?php endforeach; ?>
+
     </tbody>
   </table>
   <a href="#top" id="toparrowcontainer"> ↑ </a>

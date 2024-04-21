@@ -63,7 +63,7 @@
 
     <form action="deleteWaffle.php" class="delete" id="deleteForm" method="post">
       <div>
-        <label for="waffleName">Waffle Name:</label>
+        <label for="waffleName">Remove Waffle:</label>
         <select id="waffleName" name="waffleName" required>
           <option value="" selected disabled>Select Waffle</option>
           <?php
