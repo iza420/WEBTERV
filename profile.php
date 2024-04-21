@@ -2,8 +2,8 @@
 session_start();
 
 // Ellenőrizzük, hogy be van-e jelentkezve a felhasználó és van-e felhasználói adat a munkamenetben
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && isset($_SESSION["user_data"])) {
-    $userData = $_SESSION["user_data"];
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && isset($_SESSION["userdata"])) {
+    $userData = $_SESSION["userdata"];
 } else {
     // Ha nincs bejelentkezett felhasználó vagy nincsenek felhasználói adatok a munkamenetben, hozzunk létre üres felhasználói adatokat
     $userData = [
@@ -28,7 +28,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && isset($_SE
     <h2>Profile</h2>
     <div class="container">
       <p>Personal data and shipping address</p>
-      <form class="form">
+      <form class="form"method="post" action="update_profile.php">
         <div class="row">
           <div class="col">
             <label for="firstName">First name:</label>
@@ -54,22 +54,22 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && isset($_SE
             <label for="country">Country:</label>
             <select id="country" name="country" required>
               <option value="">Choose from...</option>
-              <option value="hungary">Hungary</option>
+              <option value="hungary" <?php echo $userData['country'] == 'hungary' ? 'selected' : ''; ?>>Hungary</option>
             </select>
           </div>
           <div class="col">
             <label for="zip">Postal code:</label>
-            <input type="text" id="zip" name="zip" required>
+            <input type="text" id="zip" name="zip" value="<?php echo $userData['zip']; ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label for="city">City:</label>
-            <input type="text" id="city" name="city" required>
+            <input type="text" id="city" name="city" value="<?php echo $userData['city']; ?>" required>
           </div>
           <div class="col">
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address">
+            <input type="text" id="address" name="address" value="<?php echo $userData['address']; ?>">
           </div>
         </div>
         <button type="submit">Save</button>

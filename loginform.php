@@ -14,16 +14,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // Sikeres bejelentkezés
                     session_start();
                     $_SESSION["email"] = $email;
-                    header("Location: index.html");
+                    header("Location: index.php");
                     exit();
                 }
             }
-            echo "Hibás e-mail vagy jelszó.";
+            echo "Incorrect e-mail or password.";
         } else {
-            echo "Hiba történt a felhasználók betöltésekor.";
+            echo "An error occurred while loading users.";
         }
     } else {
-        echo "Hiányzó e-mail vagy jelszó.";
+        echo "Missing email or password.";
     }
 }
 ?>
