@@ -58,28 +58,26 @@
           accept="image/*" required
         />
       </div>
-      <div>
-        <label for="removeToppings">Remove Toppings:</label>
-        <select id="removeToppings" name="removeToppings" required>
-          <option value="">Select a topping to remove</option>
-          <option value="topping1">None</option>
-        </select>
-      </div>
       <button type="submit">Save Waffle</button>
     </form>
 
-    <form
-      class="delete"
-      id="deleteForm"
-      method="post"
-      enctype="multipart/form-data"
-    >
+    <form action="deleteWaffle.php" class="delete" id="deleteForm" method="post">
       <div>
         <label for="waffleName">Waffle Name:</label>
-        <input type="text" id="waffleName" name="waffleName" required />
+        <select id="waffleName" name="waffleName" required>
+          <option value="" selected disabled>Select Waffle</option>
+          <?php
+          $wafflesData = file("waffles.txt", FILE_IGNORE_NEW_LINES);
+          foreach ($wafflesData as $waffle) {
+              $waffleDetails = explode("|", $waffle);
+              echo "<option value='{$waffleDetails[0]}'>{$waffleDetails[0]}</option>";
+          }
+          ?>
+        </select>
       </div>
-      <button type="delete">Remove Waffle</button>
+      <button type="submit">Remove Waffle</button>
     </form>
+    
 
     <footer>
       <a href="index.html">Home</a>
