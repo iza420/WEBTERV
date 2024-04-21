@@ -1,33 +1,33 @@
-<?php
-// Ellenőrizzük, hogy a form elküldte az adatokat a POST metódussal
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ellenőrizzük és mentjük a beérkező adatokat
-    $fname = htmlspecialchars($_POST["fname"]);
-    $lname = htmlspecialchars($_POST["lname"]);
-    $passwd = $_POST["passwd"];
-    $passwd_check = $_POST["passwd-check"];
-    $phone_number = htmlspecialchars($_POST["phone-number"]);
-    $email = $_POST["email"];
-
-    // Ellenőrizzük, hogy a jelszavak megegyeznek-e
-    if ($passwd !== $passwd_check) {
-        echo json_encode(array("success" => false, "message" => "A megadott jelszavak nem egyeznek."));
-        exit;
-    }
-
-    // Validáljuk az e-mail címet
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo json_encode(array("success" => false, "message" => "Érvénytelen e-mail cím formátum."));
-        exit;
-    }
-
-    // A regisztráció sikeres volt, ha minden validáció rendben van
-    // Itt lehetőség van az adatok adatbázisba mentésére vagy más kezelésére
-
-    // Példa: sikeres regisztráció válasz küldése JSON formátumban
-    echo json_encode(array("success" => true, "message" => "Sikeres regisztráció. Üdvözöljük, $fname $lname!"));
-} else {
-    // Ha nem POST metódussal érkezett az adat, hiba választ küldünk
-    echo json_encode(array("success" => false, "message" => "Érvénytelen kérési mód."));
-}
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div id="formcontainer">
+        <div id="formcontainerinside">
+            <div id="form">
+                <h1>Welcome back!</h1>
+                <h2>Log in or Sign up for the wonderful waffles!</h2>
+                 <form action="loginform.php" id="forminside" method="post">
+                        <label>Email: <input type="text" name="email" required></label>
+                        <label>Password: <input type="password" name="passwd" required></label>
+                        <div id="remembermecontainer">
+                            <label>Remember Me<input type="checkbox" id="rememberMe" name="rememberMe"></label>
+                        </div>
+                        <button id="submit">Sign In</button>
+                </form>
+                <p>Don't have an account? <a href="register.php">Sign Up</a></p>
+            </div>
+            <div id="image">
+                <img src="resources/wafflelogin.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <a href="index.html" id="gobackbutton">←</a>
+</body>
+</html>

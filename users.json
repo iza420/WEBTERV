@@ -1,3 +1,24 @@
 {
-    "users": []
+    "users": [],
+    "0": {
+        "first_name": "aaa",
+        "last_name": "bbb",
+        "password": "$2y$10$CAnC8yvfKgkiygEau9bX2uXzo\/zJuA4i2V2KtgMD8qQx7MKTGLY.S",
+        "phone_number": "36300123456",
+        "email": "anitarozsa11@gmail.com"
+    },
+    "1": {
+        "first_name": "aaa",
+        "last_name": "bbb",
+        "password": "$2y$10$CRl7evd5lBarvekRSQnMRenJ8NTsP.nXE4cPv6TlQMqBhgOnqNe9.",
+        "phone_number": "36300123456",
+        "email": "anitarozsa11@gmail.com"
+    },
+    "2": {
+        "first_name": "hey",
+        "last_name": "ho",
+        "password": "$2y$10$y5nHmaNz2vA1Q0GrQso25OpgdUW1\/oHsMFN9hXXhyJw8uDbLBb32.",
+        "phone_number": "36200123456",
+        "email": "te@kivagy.hu"
+    }
 }
