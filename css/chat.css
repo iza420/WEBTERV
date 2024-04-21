@@ -6,8 +6,7 @@ html{
     background-color: rgb(237, 229, 239);
     display: flex;
     flex-direction: column;
-    height: 100%;
-
+    
   }
   header {
     position: sticky;
@@ -60,12 +59,13 @@ html{
     align-items: center; /* Vertically center the content */
     align-self: center;
     margin: 20px 0px 20px 0px;
+    overflow: hidden;
  
 }
 
 .chat{
   display: flex;
-  justify-content: center;
+  width: 100%;
 }
     
 
@@ -101,14 +101,19 @@ html{
 }
 
 .chat-box {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 20px;
   overflow-y: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .messages {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .message {
@@ -131,6 +136,8 @@ html{
 .input-box {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 90%;
   padding: 15px;
   background-color: #f5f5f5;
 }
@@ -158,4 +165,37 @@ html{
 
 .input-box button:hover {
     background-color: #0056b3;
+}
+#sendbutton{
+  border: none;
+  width: 151px;
+  height: 60px;
+  font-size: 17px;
+  color: #2c2a2a;
+  background-color: rgba(235, 159, 222, 0.5);
+  border-radius: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  align-self: center;
+}
+#sendbutton:hover{
+  background-color: rgba(160, 106, 151, 0.5);
+  transition: background-color 0.5s ease;
+
+}
+
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 150px;
+  background-color: rgba(235, 159, 222, 0.5);
+
+}
+footer a{
+  text-decoration: none;
+  color: #504d4d;
+  font-weight: bold;
+  bottom: 0;
+
 }
