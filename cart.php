@@ -14,19 +14,7 @@ session_start();
 </head>
 
 <body id="top">
-  <header>
-    <div id="logo">
-      <a href="index.html" id="index">Fluffy Stack Café</a>
-    </div>
-    <div id="headerlinks">
-      <a href="index.html">Home</a>
-      <a href="waffles.html">Waffles</a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
-      <a href="profile.html">Profile</a>
-      <a href="cart.html"><img src="resources/blackcart.png" alt="cart" /></a>
-    </div>
-  </header>
+<?php include 'navbar.php'; ?>
 
   <table>
     <caption>

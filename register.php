@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <a href="index.html" id="gobackbutton">←</a>
+    <a href="index.php" id="gobackbutton">←</a>
     <script>
         document.getElementById('submit').addEventListener('click', function() {
             document.getElementById('forminside').submit();

@@ -28,6 +28,6 @@
             </div>
         </div>
     </div>
-    <a href="index.html" id="gobackbutton">←</a>
+    <a href="index.php" id="gobackbutton">←</a>
 </body>
 </html>
