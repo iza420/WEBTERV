@@ -73,40 +73,23 @@
     </div>
     <h2>Order history</h2>
         <table>
-          <tbody>
-            <tr>
-              <td class="img">
-                <img src="resources/gingerbreadwaffle.jpg" alt="gingerbread waffle" />
-              </td>
-              <td class="name">Cinnamon Swirl Waffle</td>
-    
-              <td class="ingredients">
-                All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs,
-                Milk, Unsalted butter, Vanilla extract
-              </td>
-              <td class="price">5.99$</td>
-              <td>
-                <label class="toppings">Additional Toppings:</label>
-                <p class="toppings">Chocolate</p>
-              </td>
-              <td> <button class="add-button">Reorder</button></td>
-            </tr>
-    
-            <tr>
-              <td class="img"><img src="resources/chocwaffle.png" alt="choc waffle" /></td>
-              <td class="name">Nutty Banana Crunch Waffle</td>
-              <td class="ingredients">
-                All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs,
-                Milk, Unsalted butter, Vanilla extract
-              </td>
-              <td class="price">8.99$</td>
-              <td>
-                <label class="toppings">Additional Toppings:</label>
-                <p class="toppings">Chocolate</p>
-              </td>
-              <td> <button class="add-button">Reorder</button></td>
-            </tr>
-          </tbody>
+        <tbody>
+      <?php
+      $file = fopen("previous_orders.txt", "r");
+      if ($file) {
+          while (($line = fgets($file)) !== false) {
+              $waffleName = trim($line);
+              echo "<tr>";
+              echo "<td class='name'>" . $waffleName . "</td>";
+              echo "<td> <button class='add-button'>Reorder</button></td>";
+              echo "</tr>";
+          }
+          fclose($file);
+      } else {
+          echo "<tr><td>Error: Unable to open previous_orders.txt.</td></tr>";
+      }
+      ?>
+    </tbody>
         </table>
       <p id="no-orders-message">You haven't ordered yet.</p>
       <a href="adminlog.html" id="adminlink"> Admin </a>
@@ -120,6 +103,5 @@
         <a href="index.html">About us</a>
         <a href="index.html">Contact us</a>
       </footer>
-    
   </body>
 </html>

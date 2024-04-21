@@ -51,9 +51,11 @@ session_start();
           echo "</td>";
           echo "</tr>";
       }
-      echo "<tr>";
+      echo "<tr class='ordercontainer'>";
       echo "<td>";
+      echo "<form action='order.php' method='post'>";
       echo "<button type='submit' class='order-button'>Order All</button>";
+      echo "</form>";
       echo "</td>";
       echo "</tr>";
   } else {
