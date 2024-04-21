@@ -1,24 +1,24 @@
 {
     "users": [],
     "0": {
-        "first_name": "aaa",
-        "last_name": "bbb",
-        "password": "$2y$10$CAnC8yvfKgkiygEau9bX2uXzo\/zJuA4i2V2KtgMD8qQx7MKTGLY.S",
-        "phone_number": "36300123456",
-        "email": "anitarozsa11@gmail.com"
+        "first_name": "admin",
+        "last_name": "first",
+        "password": "$2y$10$s72bjcLlBixWXIBmaTkyVeqxqQi0tJYOlSSsh9dxbKNrP2FNRFCZm",
+        "phone_number": "36209999999",
+        "email": "adminfirst@waffle.hu"
     },
     "1": {
-        "first_name": "aaa",
-        "last_name": "bbb",
-        "password": "$2y$10$CRl7evd5lBarvekRSQnMRenJ8NTsP.nXE4cPv6TlQMqBhgOnqNe9.",
-        "phone_number": "36300123456",
-        "email": "anitarozsa11@gmail.com"
+        "first_name": "admin",
+        "last_name": "second",
+        "password": "$2y$10$RPN8JBf3pc0Eu6PBVj1GJ.bCpSdVNFn6KqLBVTuLxI2kOYHmbsNj.",
+        "phone_number": "36309999999",
+        "email": "adminsecond@waffle.hu"
     },
     "2": {
-        "first_name": "hey",
-        "last_name": "ho",
-        "password": "$2y$10$y5nHmaNz2vA1Q0GrQso25OpgdUW1\/oHsMFN9hXXhyJw8uDbLBb32.",
-        "phone_number": "36200123456",
-        "email": "te@kivagy.hu"
+        "first_name": "first",
+        "last_name": "user",
+        "password": "$2y$10$YZEd3UOl4wCBl6x0bUdtvOuWe0wJ0F.NUg3briTPZ7FpF25dh53\/a",
+        "phone_number": "36301111111",
+        "email": "firstuser11@gmail.com"
     }
 }

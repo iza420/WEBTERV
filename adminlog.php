@@ -11,16 +11,12 @@
     <div id="formcontainer">
         <div id="formcontainerinside">
             <div id="form">
-                <form id="forminside" method="post">
+                <form action="adminlogin.php" id="forminside" method="post">
                     <h1>Admin Page</h1>
-                    <label>Admin name: <input type="text" name="adminname" size="25"></label>
+                    <label>Admin name: <input type="text" name="adminname"></label>
                     <label>Password: <input type="password" name="passwd" required></label>
+                    <input type="submit" value="Submit" id="submit">
                 </form>
-                
-                <a href="admin.php" id="submit">
-                Submit
-                </a>
-                
             </div>
         </div>
     </div>

@@ -70,17 +70,18 @@ h1 {
 }
 #form input {
     width: calc(100% - 10px);
-    height: 15px;
-    font-size: 10px;
-    padding: 4px 4px 4px 4px;
+    height: 30px; 
+    font-size: 16px; 
+    padding: 8px;
     margin-bottom: 10px;
     border-radius: 10px;
     border: none;
     background-color: rgba(235, 159, 222, 0.5);
 }
+
 #submit {
     width: 100px;
-    height: 50px;
+    height: 200px;
     background-color: rgba(235, 159, 222, 0.5);
     border-radius: 20px;
     color: white;
@@ -88,16 +89,14 @@ h1 {
     align-items: center;
     justify-content: center;
     border: none;
-    margin: 20px auto 20px auto;
+    margin: 20px auto;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 20px;
 }
- a{
-    text-decoration: none;
-}
+
 #submit:hover {
-    background-color: rgba(160,106,151,0.5);
+    background-color: rgba(160, 106, 151, 0.5);
 }
 #gobackbutton {
     position: fixed;
