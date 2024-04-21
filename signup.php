@@ -11,10 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $errors = [];
 
-    if (strlen($fname) > 25) {
-        $errors[] = "First name or last name cannot exceed 25 characters.";
-    }
-    if ( strlen($lname) > 25) {
+    if (strlen($fname) > 25 || strlen($lname) > 25) {
         $errors[] = "First name or last name cannot exceed 25 characters.";
     }
 
@@ -30,17 +27,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $userData = [
             "first_name" => $fname,
             "last_name" => $lname,
-            "password" => password_hash($password, PASSWORD_DEFAULT),
             "phone_number" => $phone_number,
             "email" => $email
         ];
+
+        // Load existing user data from users.json
+        $usersData = [];
         $jsonFile = 'users.json';
-        $usersData = json_decode(file_get_contents($jsonFile), true);
+        if (file_exists($jsonFile)) {
+            $usersData = json_decode(file_get_contents($jsonFile), true);
+        }
+
+        // Add new user data
         $usersData[] = $userData;
+
+        // Save updated user data back to users.json
         file_put_contents($jsonFile, json_encode($usersData, JSON_PRETTY_PRINT));
+
+        // Store user data in session (without password)
         $_SESSION["loggedin"] = true;
-        $_SESSION["username"] = $email;
-        header("Location: login.php");
+        unset($userData['password']); // Remove password before storing in session
+        $_SESSION["user_data"] = $userData;
+
+        // Redirect to profile.php after successful registration
+        header("Location: profile.php");
         exit;
     } else {
         foreach ($errors as $error) {
@@ -48,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+
 function clean_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -55,3 +66,4 @@ function clean_input($data) {
     return $data;
 }
 ?>
+

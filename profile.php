@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+// Ellenőrizzük, hogy be van-e jelentkezve a felhasználó és van-e felhasználói adat a munkamenetben
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && isset($_SESSION["user_data"])) {
+    $userData = $_SESSION["user_data"];
+} else {
+    // Ha nincs bejelentkezett felhasználó vagy nincsenek felhasználói adatok a munkamenetben, hozzunk létre üres felhasználói adatokat
+    $userData = [
+        "first_name" => "",
+        "last_name" => "",
+        "email" => "",
+        "phone_number" => "",
+        // További mezők itt
+    ];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,21 +32,21 @@
         <div class="row">
           <div class="col">
             <label for="firstName">First name:</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="firstName" name="firstName" value="<?php echo $userData['first_name']; ?>" required>
           </div>
           <div class="col">
             <label for="lastName">Last name:</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <input type="text" id="lastName" name="lastName" value="<?php echo $userData['last_name']; ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" value="<?php echo $userData['email']; ?>" required>
           </div>
           <div class="col">
             <label for="phone">Phone number:</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" value="<?php echo $userData['phone_number']; ?>">
           </div>
         </div>
         <div class="row">
