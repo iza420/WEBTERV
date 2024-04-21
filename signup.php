@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Űrlap adatok ellenőrzése és feldolgozása
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fname = clean_input($_POST["fname"]);
     $lname = clean_input($_POST["lname"]);
@@ -10,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone_number = clean_input($_POST["phone-number"]);
     $email = clean_input($_POST["email"]);
 
-    // Ellenőrzési logika
     $errors = [];
 
     if (strlen($fname) > 25) {
@@ -28,9 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Invalid email format.";
     }
 
-    // Ha nincs hiba, regisztráció végrehajtása
     if (empty($errors)) {
-        // Adatok mentése JSON fájlba
         $userData = [
             "first_name" => $fname,
             "last_name" => $lname,
@@ -38,25 +34,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "phone_number" => $phone_number,
             "email" => $email
         ];
-
         $jsonFile = 'users.json';
         $usersData = json_decode(file_get_contents($jsonFile), true);
         $usersData[] = $userData;
         file_put_contents($jsonFile, json_encode($usersData, JSON_PRETTY_PRINT));
-
-        // Sikeres regisztráció esetén átirányítás a login oldalra
         $_SESSION["loggedin"] = true;
         $_SESSION["username"] = $email;
         header("Location: login.php");
         exit;
     } else {
-        // Hibaüzenetek megjelenítése
         foreach ($errors as $error) {
             echo "<p>Error: $error</p>";
         }
     }
 }
-
 function clean_input($data) {
     $data = trim($data);
     $data = stripslashes($data);

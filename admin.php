@@ -7,19 +7,7 @@
     <title>Admin</title>
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html" id="index">Fluffy Stack Café</a>
-      </div>
-      <div id="headerlinks">
-        <a href="index.html">Home</a>
-        <a href="waffles.html">Waffles</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-        <a href="profile.html">Profile</a>
-        <a href="cart.html"><img src="resources/cart.png" alt="cart" /></a>
-      </div>
-    </header>
+  <?php include 'navbar.php'; ?>
 
     <h2>Admin Page</h2>
     <form action="add_waffle.php" id="waffleForm" method="POST" enctype="multipart/form-data">
@@ -80,13 +68,13 @@
     
 
     <footer>
-      <a href="index.html">Home</a>
-      <a href="waffles.html">Order</a>
-      <a href="cart.html">Cart</a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
-      <a href="index.html">About us</a>
-      <a href="index.html">Contact us</a>
+      <a href="#top">Home</a>
+      <a href="waffles.php">Order</a>
+      <a href="cart.php">Cart</a>
+      <a href="login.php">Login</a>
+      <a href="register.php">Register</a>
+      <a href="#aboutcontainer">About us</a>
+      <a href="#contactus">Contact us</a>
     </footer>
   </body>
 </html>

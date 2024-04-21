@@ -7,19 +7,7 @@
   </head>
 
   <body id="top">
-    <header>
-      <div id="logo">
-        <a href="index.html" id="index">Fluffy Stack Café</a>
-      </div>
-      <div id="headerlinks">
-        <a href="index.html">Home</a>
-        <a href="waffles.html">Waffles</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-        <a href="profile.html">Profile</a>
-        <a href="cart.html"><img src="resources/cart.png" alt="cart"></a>
-      </div>
-    </header>
+  <?php include 'navbar.php'; ?>
 
     <div id="adcontainer">
       <div id="leftside">
@@ -28,7 +16,7 @@
           Choose the healty alternative to your guilty pleasure with our freshy
           made waffles
         </p>
-        <a href="waffles.html" class="buttoncontainer">
+        <a href="waffles.php" class="buttoncontainer">
           Order Now →
         </a>
       </div>
@@ -72,7 +60,7 @@
           offering them to you. If you have any questions or comments, please
           don't hesitate to contact us. Sincerely, The Fluffy Stack Team
         </p>
-        <a href="waffles.html" class="buttoncontainer">
+        <a href="waffles.php" class="buttoncontainer">
           Waffles →
         </a>
       </div>
@@ -80,7 +68,7 @@
 
     <div id="menucontainer">
       <div id="topcontainer">
-        <a href="waffles.html" class="coloredtext">Menu</a>
+        <a href="waffles.php" class="coloredtext">Menu</a>
         <h3>Explore Our Most Popular Waffles</h3>
       </div>
       <div id="wafflecontainer">
@@ -156,10 +144,10 @@
 
     <footer>
       <a href="#top">Home</a>
-      <a href="waffles.html">Order</a>
-      <a href="cart.html">Cart</a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
+      <a href="waffles.php">Order</a>
+      <a href="cart.php">Cart</a>
+      <a href="login.php">Login</a>
+      <a href="register.php">Register</a>
       <a href="#aboutcontainer">About us</a>
       <a href="#contactus">Contact us</a>
     </footer>

@@ -7,20 +7,25 @@
     <link rel="stylesheet" type="text/css" href="css/profile.css">
   </head>
   <body>
-    <header>
-      <div id="logo">
-        <a href="index.html" id="index">Fluffy Stack Café</a>
-      </div>
-      <div id="headerlinks">
-        <a href="index.html">Home</a>
-        <a href="waffles.html">Waffles</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-        <a href="profile.html" id="current">Profile</a>
-        <a href="cart.html"><img src="resources/cart.png" alt="cart"></a>
-      </div>
-    </header>
+  <?php include 'navbar.php'; ?>
     <h2>Profile</h2>
+
+    <div class="profile-picture">
+        <h3>Upload Profile Picture</h3>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+        </form>
+    </div>
+    
+    
+    <div class="profile-image-container">
+        <div class="profile-image">
+            <img src="uploads/kiscica.jpg" alt="Profile Picture" id="uploadedProfileImage">
+        </div>
+    </div>
+
     <div class="container">
       <p>Personal data and shipping address</p>
       <form class="form">
@@ -92,16 +97,17 @@
     </tbody>
         </table>
       <p id="no-orders-message">You haven't ordered yet.</p>
-      <a href="adminlog.html" id="adminlink"> Admin </a>
+      <a href="adminlog.php" id="adminlink"> Admin </a>
       <a href="#top" id="toparrowcontainer"> ↑ </a>
       <footer>
-        <a href="index.html">Home</a>
-        <a href="waffles.html">Order</a>
-        <a href="cart.html">Cart</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-        <a href="index.html">About us</a>
-        <a href="index.html">Contact us</a>
-      </footer>
+      <a href="#top">Home</a>
+      <a href="waffles.php">Order</a>
+      <a href="cart.php">Cart</a>
+      <a href="login.php">Login</a>
+      <a href="register.php">Register</a>
+      <a href="#aboutcontainer">About us</a>
+      <a href="#contactus">Contact us</a>
+    </footer>
+    
   </body>
 </html>
