@@ -1,0 +1,6 @@
+Berry Bliss Waffle|5.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Chocolate,Whipped Cream|resources/fruitwaffle.jpg
+Savory Sunrise Waffle|7.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Vanilla,Nutella|resources/heartwaffle.png
+Cinnamon Swirl Waffle|5.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Nutella,Caramel|resources/gingerbreadwaffle.jpg
+Nutty Banana Crunch Waffle|8.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Whipped Cream|resources/chocwaffle.png
+S'mores Sensation Waffle|6.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Chocolate,Caramel|resources/belgianwaffles.jpg
+Veggie Waffle|5.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Nutella|resources/heartwaffle.png

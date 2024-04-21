@@ -1,20 +1,22 @@
 <?php
-  function save_users(string $path, array $data) {
-    $users = load_users($path);
+function save_users(string $path, array $data)
+{
+  $users = load_users($path);
 
-    $users["users"][] = $data;
+  $users["users"][] = $data;
 
-    $json_data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+  $json_data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-    file_put_contents($path, $json_data);
-  }
+  file_put_contents($path, $json_data);
+}
 
-  function load_users(string $path): array {
-    if (!file_exists($path))
-      die("Nem sikerült a fájl megnyitása!");
+function load_users(string $path): array
+{
+  if (!file_exists($path))
+    die("Nem sikerült a fájl megnyitása!");
 
-    $json = file_get_contents($path);
+  $json = file_get_contents($path);
 
-    return json_decode($json, true);
-  }
+  return json_decode($json, true);
+}
 ?>
