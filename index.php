@@ -80,7 +80,9 @@
             delightful creation features a fluffy waffle base topped with a
             medley of fresh strawberries, blueberries, and raspberries.
           </p>
-          <button class="add-button">+</button>
+          <form class="add-button" action="waffles.php" method="post">
+               <button type="submit">+</button>
+          </form>
         </div>
         <div class="waffle">
           <div class="imgdiv" id="imgdiv2"></div>
@@ -90,7 +92,9 @@
             sensation combines a crispy waffle with layers of savory ham, melted
             cheddar cheese, and perfectly cooked scrambled eggs.
           </p>
-          <button class="add-button">+</button>
+     <form class="add-button" action="waffles.php" method="post">
+               <button type="submit">+</button>
+          </form>
         </div>
         <div class="waffle">
           <div class="imgdiv" id="imgdiv3"></div>
@@ -101,7 +105,9 @@
             with cinnamon and vanilla, creating a perfect balance of sweet and
             spice.
           </p>
-          <button class="add-button">+</button>
+     <form class="add-button" action="waffles.php" method="post">
+               <button type="submit">+</button>
+          </form>
         </div>
         <div class="waffle">
           <div class="imgdiv" id="imgdiv4"></div>
@@ -113,7 +119,9 @@
             begins with a golden waffle base topped with sliced bananas and a
             generous drizzle of creamy peanut butter.
           </p>
-          <button class="add-button">+</button>
+            <form class="add-button" action="waffles.php" method="post">
+               <button type="submit">+</button>
+          </form>
         </div>
         <div class="waffle">
           <div class="imgdiv" id="imgdiv5"></div>
@@ -124,7 +132,9 @@
             a fluffy waffle topped with gooey marshmallows, melted chocolate,
             and crushed graham crackers.
           </p>
-          <button class="add-button">+</button>
+     <form class="add-button" action="waffles.php" method="post">
+               <button type="submit">+</button>
+          </form>
         </div>
         <div class="waffle">
           <div class="imgdiv" id="imgdiv6"></div>
@@ -135,7 +145,9 @@
             spices, topped with a colorful array of roasted vegetables including
             tomatoes, bell peppers, and zucchini.
           </p>
-          <button class="add-button">+</button>
+     <form class="add-button" action="waffles.php" method="post">
+               <button type="submit">+</button>
+          </form>
         </div>
       </div>
     </div>
