@@ -1,13 +1,19 @@
 header {
   position: sticky;
   top: 0;
-  background-color: rgba(235, 159, 222, 0.8);
+  background-color: rgba(228, 169, 218, 0.8);
   height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
+header a.active {
+  font-weight: bold;
+  font-size: 22px;
+  color: #111;
+}
+
 header a {
   color: white;
   text-decoration: none;
@@ -45,4 +51,20 @@ header #index {
   header #index {
     padding-left: 0px;
   }
+}
+@media screen and (max-width: 720px) {
+  #headerlinks{
+    flex-direction: column;
+    padding: 0px;
+  }
+  header{
+    height: 400px;
+    position: relative;
+    gap: 20px;
+  }
+  header #index {
+    font-size: 25px;
+    padding-left: 0px;
+  }
+
 }

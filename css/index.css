@@ -23,18 +23,18 @@ footer a{
 
 }
 
-#adcontainer {
+.adcontainer {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 5% 7%;
 }
-#adcontainer #leftside {
+.adcontainer .leftside {
   display: flex;
   flex-direction: column;
   width: 500px;
 }
-#adcontainer #leftside #ad {
+.adcontainer .leftside .ad {
   margin-bottom: 5px;
 }
 
@@ -62,7 +62,8 @@ footer a{
   );
   transition: background-color 0.5s ease;
 }
-#adcontainer #rightside img {
+
+.adcontainer .rightside img {
   width: 600px;
 }
 h2 {
@@ -158,6 +159,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   border: none;
   width: 135px;
   height: 60px;
@@ -252,12 +254,12 @@ p {
   header #index {
     padding-left: 0px;
   }
-  #adcontainer {
+  .adcontainer {
     display: flex;
     flex-direction: column;
   }
 
-  #adcontainer #rightside img {
+  .adcontainer .rightside img {
     width: 400px;
   }
   #infocontainer{
@@ -290,7 +292,7 @@ p {
   .waffle {
     width: 80%;
   }
-  #adcontainer #leftside {
+  .adcontainer .leftside {
     display: flex;
     flex-direction: column;
     justify-content: space-around;

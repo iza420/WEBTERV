@@ -9,13 +9,19 @@
         <a href="index.php" id="index">Fluffy Stack Café</a>
       </div>
       <div id="headerlinks">
-        <a href="index.php">Home</a>
-        <a href="waffles.php">Waffles</a>
-        <a href="login.php">Login</a>
-        <a href="register.php">Register</a>
-        <a href="profile.php">Profile</a>
-        <a href="cart.php"><img src="resources/cart.png" alt="cart"></a>
+        <a <?php if(basename($_SERVER['PHP_SELF']) == 'index.php') echo 'class="active"'; ?> href="index.php">Home</a>
+        <a <?php if(basename($_SERVER['PHP_SELF']) == 'waffles.php') echo 'class="active"'; ?> href="waffles.php">Waffles</a>
+        <a <?php if(basename($_SERVER['PHP_SELF']) == 'login.php'); ?> href="login.php">Login</a>
+        <a <?php if(basename($_SERVER['PHP_SELF']) == 'register.php'); ?> href="register.php">Register</a>
+        <a <?php if(basename($_SERVER['PHP_SELF']) == 'profile.php') echo 'class="active"'; ?> href="profile.php">Profile</a>
+        <a <?php if(basename($_SERVER['PHP_SELF']) == 'cart.php')?> href="cart.php">
+            <?php if(basename($_SERVER['PHP_SELF']) == 'cart.php') : ?>
+                <img src="resources/blackcart.png" alt="cart">
+            <?php else: ?>
+                <img src="resources/cart.png" alt="cart">
+            <?php endif; ?>
+        </a>
       </div>
-    </header>
+</header>
 </body>
 </html>
