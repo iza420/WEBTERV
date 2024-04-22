@@ -87,7 +87,8 @@ if (!$userData) {
         <tbody>
         <?php
 if (isset($_SESSION['orders']) && !empty($_SESSION['orders'])) {
-    foreach ($_SESSION['orders'] as $key => $order) {
+    $lastThreeOrders = array_slice($_SESSION['orders'], -3);
+    foreach ($lastThreeOrders as $key => $order) {
         echo "<tr>";
         echo "<td class='img'><img src='" . $order['img'] . "' alt='Order Image' /></td>";
         echo "<td class='name'>" . $order['name'] . "</td>";

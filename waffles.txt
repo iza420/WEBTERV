@@ -4,4 +4,3 @@ Cinnamon Swirl Waffle|5.99|All-purpose flour, Granulated sugar, Baking powder, S
 Nutty Banana Crunch Waffle|8.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Whipped Cream|resources/chocwaffle.png
 S'mores Sensation Waffle|6.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Chocolate,Caramel|resources/belgianwaffles.jpg
 Veggie Waffle|5.99|All-purpose flour, Granulated sugar, Baking powder, Salt, Eggs, Milk, Unsalted butter, Vanilla extract|Nutella|resources/heartwaffle.png
-WQEFTQER|2314443|dfvsfv|dfvvgf, rgfervfe, ergefv|newimages/66255b928c541.png
