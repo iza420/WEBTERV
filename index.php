@@ -6,27 +6,29 @@
   <title>Fluffy Stack Café</title>
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <script>
-       
         function displayAlert() {
             var alertDiv = document.querySelector('.alert');
             alertDiv.style.display = 'flex';
+
             setTimeout(function() {
-                alertDiv.style.display = 'none';
+                alertDiv.style.opacity = '0';
+                setTimeout(function() {
+                    alertDiv.style.display = 'none';
+                }, 500);
             }, 3000);
         }
-    </script>
+  </script>
 </head>
 
 <body id="top">
 <?php
-
 if (isset($_GET['loginFailed']) && $_GET['loginFailed'] == true) {
-    echo '<div class="alert">';
     include 'alert.php';
-    echo '</div>';
     echo '<script>displayAlert();</script>';
 }
 ?>
+
+
   <?php include 'navbar.php'; ?>
   <div class="adcontainer">
     <div class="leftside">

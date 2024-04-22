@@ -1,17 +1,20 @@
-.alert{
-    display: flex;
-    align-items: center;
-    height: 70px;
-    background-color: rgba(228, 78, 91, 0.5);
-    margin:0px 0px 10px 0px;
-  }
-  .alert img{
-    height: 40px;
-    margin-left: 20px;
-  }
-  .alert .alert-text{
-    color: rgb(114, 40, 40);
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 10px;
-  }
+.alert {
+  display: none;
+  align-items: center;
+  height: 70px;
+  background-color: rgba(228, 78, 91, 0.5);
+  margin: 0px 0px 10px 0px;
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+.alert img {
+  height: 40px;
+  margin-left: 20px;
+}
+
+.alert .alert-text {
+  color: rgb(114, 40, 40);
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
