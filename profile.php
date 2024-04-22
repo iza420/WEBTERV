@@ -15,7 +15,8 @@ $loggedInUserEmail = $_SESSION['email']; // Az aktuálisan bejelentkezett felhas
 $userData = null;
 
 foreach ($users as $user) {
-    if ($user['email'] === $loggedInUserEmail) {
+    // Ellenőrizzük, hogy a felhasználónak van-e e-mail címe
+    if (isset($user['email']) && $user['email'] === $loggedInUserEmail) {
         $userData = $user;
         break;
     }
@@ -25,18 +26,19 @@ if (!$userData) {
     die("User data not found.");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="css/profile.css">
-  </head>
-  <body>
-  <?php include 'navbar.php'; ?>
-    <h2>Profile</h2>
-    <div class="container">
+</head>
+<body>
+<?php include 'navbar.php'; ?>
+<h2>Profile</h2>
+<div class="container">
     <p>Personal data and shipping address</p>
     <form class="form" method="post" action="update_profile.php">
         <div class="row">
@@ -52,17 +54,17 @@ if (!$userData) {
         <div class="row">
             <div class="col">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="<?php echo $userData['email']; ?>" required>
+                <input type="email" id="email" name="email" value="<?php echo $userData['email']; ?>" required autocomplete="email">
             </div>
             <div class="col">
                 <label for="phone">Phone number:</label>
-                <input type="tel" id="phone" name="phone" value="<?php echo $userData['phone-number']; ?>">
+                <input type="tel" id="phone" name="phone" value="<?php echo $userData['phone-number']; ?>" autocomplete="tel">
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="country">Country:</label>
-                <input type="text" id="country" name="country" value="<?php echo $userData['country']; ?>" required>
+                <input type="text" id="country" name="country" value="<?php echo $userData['country']; ?>" required autocomplete="country">
             </div>
             <div class="col">
                 <label for="zip">Postal code:</label>
@@ -76,13 +78,13 @@ if (!$userData) {
             </div>
             <div class="col">
                 <label for="address">Address:</label>
-                <input type="text" id="address" name="address" value="<?php echo $userData['address']; ?>">
+                <input type="text" id="address" name="address" value="<?php echo $userData['address']; ?>" autocomplete="address-line1">
             </div>
         </div>
         <button type="submit">Save</button>
     </form>
     <button id="deletebutton">Delete Profile</button>
-  </div>
+</div>
     <h2>Order history</h2>
         <table>
         <tbody>
