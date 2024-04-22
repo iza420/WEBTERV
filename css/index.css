@@ -8,8 +8,6 @@ body {
   flex-direction: column;
 }
 
-
-
 .adcontainer {
   display: flex;
   align-items: center;
@@ -24,7 +22,6 @@ body {
 .adcontainer .leftside .ad {
   margin-bottom: 5px;
 }
-
 .buttoncontainer {
   display: flex;
   align-items:center ;

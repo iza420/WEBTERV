@@ -8,7 +8,9 @@
 </head>
 
 <body id="top">
+  <div style="display: none;">
   <?php include 'alert.php'; ?>
+  </div>
   <?php include 'navbar.php'; ?>
   <div class="adcontainer">
     <div class="leftside">
