@@ -7,8 +7,9 @@
     <link rel="stylesheet" type="text/css" href="css/register.css">
 </head>
 <body>
+    </header>
     <div id="background"></div>
-    <div id="formcontainer">
+    <div id="formcontainer">  
         <div id="formcontainerinside">
             <div id="image">
                 <img src="resources/waffleregister.jpg" alt="">
