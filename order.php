@@ -1,16 +1,15 @@
 <?php
 session_start();
-
-if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-    $file = fopen("previous_orders.txt", "a");
-    foreach ($_SESSION['cart'] as $key => $waffle) {
-        fwrite($file, $waffle['name'] . "\n");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+        if (isset($_SESSION['orders'])) {
+            $_SESSION['orders'] = array_merge($_SESSION['orders'], $_SESSION['cart']);
+        } else {
+            $_SESSION['orders'] = $_SESSION['cart'];
+        }
+        $_SESSION['cart'] = array();
     }
-    fclose($file);
-
-    $_SESSION['cart'] = array();
-    header("Location: cart.php?order=success");
-} else {
-    header("Location: cart.php?order=empty");
+    header("Location: profile.php");
+    exit();
 }
 ?>
