@@ -55,7 +55,6 @@ if ($file) {
               <input type="hidden" name="topping" value="<?php echo $topping; ?>">
               <button type="submit" class="add-button">+</button>
             </form>
-
           </td>
         </tr>
       <?php endforeach; ?>

@@ -87,25 +87,31 @@ if (!$userData) {
         <table>
         <tbody>
         <?php
-$file = fopen("previous_orders.txt", "r");
-if ($file) {
-    while (($line = fgets($file)) !== false) {
-        $waffleName = trim($line);
+if (isset($_SESSION['orders']) && !empty($_SESSION['orders'])) {
+    foreach ($_SESSION['orders'] as $key => $order) {
         echo "<tr>";
-        echo "<td class='name'>" . $waffleName . "</td>";
+        echo "<td class='img'><img src='" . $order['img'] . "' alt='Order Image' /></td>";
+        echo "<td class='name'>" . $order['name'] . "</td>";
+        echo "<td class='price'>" . $order['price'] . "$</td>";
         echo "<td>";
-        echo "<form action='addprevioustocart.php' method='post'>";
-        echo "<input type='hidden' name='waffleName' value='" . $waffleName . "'/>";
-        echo "<button type='submit' class='add-button'>Reorder</button>";
+        echo "<label class='toppings'>" . $order['topping'] . "</label>";
+        echo "</td>";
+        echo "<td>";
+        echo "<form action='addToCart.php' method='post'>";
+        echo "<input type='hidden' name='name' value='" . $order['name'] . "'>";
+        echo "<input type='hidden' name='img' value='" . $order['img'] . "'>";
+        echo "<input type='hidden' name='price' value='" . $order['price'] . "'>";
+        echo "<input type='hidden' name='topping' value='" . $order['topping'] . "'>";
+        echo "<button type='submit' class='reorder-button'>Reorder</button>";
         echo "</form>";
         echo "</td>";
         echo "</tr>";
     }
-    fclose($file);
 } else {
-    echo "<tr><td>Error: Unable to open previous_orders.txt.</td></tr>";
+    echo "<tr><td>You have no previous orders.</td></tr>";
 }
 ?>
+
 
     </tbody>
         </table>

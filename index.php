@@ -9,7 +9,6 @@
 
 <body id="top">
   <?php include 'navbar.php'; ?>
-  
   <div id="adcontainer">
       <div id="leftside">
         <h2 id="ad">Your Favourite Waffles Delivered Hot & Fresh</h2>
@@ -24,7 +23,7 @@
       <div id="rightside">
         <img src="resources/waffel.png" alt="waffle" />
       </div>
-    </div>
+  </div>
 
   <div id="infocontainer">
     <div class="infobox">
