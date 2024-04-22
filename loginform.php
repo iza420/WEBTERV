@@ -18,16 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     exit();
                 }
             }
-            // If no matching user is found, redirect to index.php with alert
             header("Location: index.php?loginFailed=true");
             exit();
         } else {
-            // Error loading users file
             header("Location: index.php?error=true");
             exit();
         }
     } else {
-        // Missing email or password
         header("Location: index.php?error=true");
         exit();
     }

@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $waffle = array(
             'name' => $_POST['name'],
             'price' => $_POST['price'],
-            'topping' => $_POST['topping'], // Get the selected topping from the form
+            'topping' => $_POST['topping'],
             'img' => $_POST['img']
         );
         if (isset($_SESSION['cart'])) {
