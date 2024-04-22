@@ -8,6 +8,7 @@
 </head>
 
 <body id="top">
+  <?php include 'alert.php'; ?>
   <?php include 'navbar.php'; ?>
   <div class="adcontainer">
     <div class="leftside">
