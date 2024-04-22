@@ -11,19 +11,19 @@
   <?php include 'navbar.php'; ?>
   <div class="adcontainer">
     <div class="leftside">
-        <h2 class="ad">Your Favourite Waffles Delivered Hot & Fresh</h2>
-        <p class="ad-description">
-            Choose the healthy alternative to your guilty pleasure with our freshly
-            made waffles
-        </p>
-        <a href="waffles.php" class="buttoncontainer">
-            Order Now →
-        </a>
+      <h2 class="ad">Your Favourite Waffles Delivered Hot & Fresh</h2>
+      <p class="ad-description">
+        Choose the healthy alternative to your guilty pleasure with our freshly
+        made waffles
+      </p>
+      <a href="waffles.php" class="buttoncontainer">
+        Order Now →
+      </a>
     </div>
     <div class="rightside">
-        <img src="resources/waffel.png" alt="waffle" />
+      <img src="resources/waffel.png" alt="waffle" />
     </div>
-</div>
+  </div>
 
 
   <div id="infocontainer">
@@ -81,7 +81,7 @@
           delightful creation features a fluffy waffle base topped with a
           medley of fresh strawberries, blueberries, and raspberries.
         </p>
-           <a class="add-button" href="waffles.php">
+        <a class="add-button" href="waffles.php">
           <button type="submit">+</button>
         </a>
       </div>
@@ -93,7 +93,7 @@
           sensation combines a crispy waffle with layers of savory ham, melted
           cheddar cheese, and perfectly cooked scrambled eggs.
         </p>
-           <a class="add-button" href="waffles.php">
+        <a class="add-button" href="waffles.php">
           <button type="submit">+</button>
         </a>
       </div>
@@ -106,7 +106,7 @@
           with cinnamon and vanilla, creating a perfect balance of sweet and
           spice.
         </p>
-           <a class="add-button" href="waffles.php">
+        <a class="add-button" href="waffles.php">
           <button type="submit">+</button>
         </a>
       </div>
@@ -120,7 +120,7 @@
           begins with a golden waffle base topped with sliced bananas and a
           generous drizzle of creamy peanut butter.
         </p>
-           <a class="add-button" href="waffles.php">
+        <a class="add-button" href="waffles.php">
           <button type="submit">+</button>
         </a>
       </div>
@@ -146,24 +146,14 @@
           spices, topped with a colorful array of roasted vegetables including
           tomatoes, bell peppers, and zucchini.
         </p>
-           <a class="add-button" href="waffles.php">
+        <a class="add-button" href="waffles.php">
           <button type="submit">+</button>
         </a>
       </div>
     </div>
   </div>
-
   <a href="#top" id="toparrowcontainer"> ↑ </a>
-
-  <footer>
-    <a href="#top">Home</a>
-    <a href="waffles.php">Order</a>
-    <a href="cart.php">Cart</a>
-    <a href="login.php">Login</a>
-    <a href="register.php">Register</a>
-    <a href="#aboutcontainer">About us</a>
-    <a href="#contactus">Contact us</a>
-  </footer>
+  <?php include 'footer.php'; ?>
 </body>
 
 </html>
