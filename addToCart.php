@@ -1,11 +1,11 @@
 <?php
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['topping'])&& isset($_POST['img'])) {
+    if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['topping']) && isset($_POST['img'])) {
         $waffle = array(
             'name' => $_POST['name'],
             'price' => $_POST['price'],
-            'topping' => $_POST['topping'],
+            'topping' => $_POST['topping'], // Get the selected topping from the form
             'img' => $_POST['img']
         );
         if (isset($_SESSION['cart'])) {

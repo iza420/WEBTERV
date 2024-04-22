@@ -61,11 +61,17 @@ tr .img{
   align-self: flex-start;
 }
 
-  tr td{
+  tr td form{
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+  }
+  .beforeadd{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    margin: 15px;
   }
 
   tr td .toppings{
