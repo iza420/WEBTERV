@@ -5,12 +5,28 @@
   <meta charset="UTF-8" />
   <title>Fluffy Stack Café</title>
   <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <script>
+       
+        function displayAlert() {
+            var alertDiv = document.querySelector('.alert');
+            alertDiv.style.display = 'flex';
+            setTimeout(function() {
+                alertDiv.style.display = 'none';
+            }, 3000);
+        }
+    </script>
 </head>
 
 <body id="top">
-  <div style="display: none;">
-  <?php include 'alert.php'; ?>
-  </div>
+<?php
+
+if (isset($_GET['loginFailed']) && $_GET['loginFailed'] == true) {
+    echo '<div class="alert">';
+    include 'alert.php';
+    echo '</div>';
+    echo '<script>displayAlert();</script>';
+}
+?>
   <?php include 'navbar.php'; ?>
   <div class="adcontainer">
     <div class="leftside">
