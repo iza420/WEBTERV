@@ -2,7 +2,7 @@
 // Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if the required fields are filled
-    if (isset($_POST['fname'], $_POST['lname'], $_POST['passwd'], $_POST['passwd-check'], $_POST['phone-number'], $_POST['email'])) {
+    if (isset($_POST['fname'], $_POST['lname'], $_POST['passwd'], $_POST['passwd-check'], $_POST['phone-number'], $_POST['email'], $_POST['country'], $_POST['postal-code'], $_POST['city'], $_POST['address'])) {
         
         // Check if the first name or last name exceeds 25 characters
         if (strlen($_POST['fname']) > 25 || strlen($_POST['lname']) > 25) {
@@ -11,6 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check if passwords match
         if ($_POST['passwd'] !== $_POST['passwd-check']) {
             die("Passwords do not match.");
+        }
+
+        // Check if the password is at least 8 characters long
+        if (strlen($_POST['passwd']) < 8) {
+            die("Password is too short. It must be at least 8 characters long.");
         }
 
         // Check if the email address is valid
@@ -39,19 +44,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'lname' => $_POST['lname'],
             'passwd' => password_hash($_POST['passwd'], PASSWORD_DEFAULT), // Hash the password
             'phone-number' => $_POST['phone-number'],
-            'email' => $_POST['email']
+            'email' => $_POST['email'],
+            'country' => $_POST['country'],
+            'postal-code' => $_POST['postal-code'],
+            'city' => $_POST['city'],
+            'address' => $_POST['address']
         ];
 
         // Add the new user to the list of users
         $users[] = $newUser;
 
         // Save the updated list of users to the users.json file
-        file_put_contents('json/users.json', json_encode($users));
+        file_put_contents('json/users.json', json_encode($users, JSON_PRETTY_PRINT));
 
         // Successful registration message
         echo "Registration successful!";
 
-        // Redirect to profile.php
+        // Redirect to login.php or profile.php as needed
         header("Location: login.php");
         exit();
     } else {
@@ -59,5 +68,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-

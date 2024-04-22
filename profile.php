@@ -1,18 +1,28 @@
 <?php
 session_start();
 
-// Ellenőrizzük, hogy be van-e jelentkezve a felhasználó és van-e felhasználói adat a munkamenetben
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && isset($_SESSION["userdata"])) {
-    $userData = $_SESSION["userdata"];
-} else {
-    // Ha nincs bejelentkezett felhasználó vagy nincsenek felhasználói adatok a munkamenetben, hozzunk létre üres felhasználói adatokat
-    $userData = [
-        "first_name" => "",
-        "last_name" => "",
-        "email" => "",
-        "phone_number" => "",
-        // További mezők itt
-    ];
+// Ellenőrizzük, hogy be van-e jelentkezve a felhasználó
+if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
+    die("User not logged in.");
+}
+
+// Betöltjük a felhasználó adatait a users.json fájlból
+$usersData = file_get_contents('json/users.json');
+$users = json_decode($usersData, true);
+
+// Ellenőrizzük, hogy a bejelentkezett felhasználó szerepel-e a listában
+$loggedInUserEmail = $_SESSION['email']; // Az aktuálisan bejelentkezett felhasználó e-mail címe
+$userData = null;
+
+foreach ($users as $user) {
+    if ($user['email'] === $loggedInUserEmail) {
+        $userData = $user;
+        break;
+    }
+}
+
+if (!$userData) {
+    die("User data not found.");
 }
 ?>
 <!DOCTYPE html>
@@ -27,55 +37,52 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && isset($_SE
   <?php include 'navbar.php'; ?>
     <h2>Profile</h2>
     <div class="container">
-      <p>Personal data and shipping address</p>
-      <form class="form"method="post" action="update_profile.php">
+    <p>Personal data and shipping address</p>
+    <form class="form" method="post" action="update_profile.php">
         <div class="row">
-          <div class="col">
-            <label for="firstName">First name:</label>
-            <input type="text" id="firstName" name="firstName" value="<?php echo $userData['first_name']; ?>" required>
-          </div>
-          <div class="col">
-            <label for="lastName">Last name:</label>
-            <input type="text" id="lastName" name="lastName" value="<?php echo $userData['last_name']; ?>" required>
-          </div>
+            <div class="col">
+                <label for="firstName">First name:</label>
+                <input type="text" id="firstName" name="firstName" value="<?php echo $userData['fname']; ?>" required>
+            </div>
+            <div class="col">
+                <label for="lastName">Last name:</label>
+                <input type="text" id="lastName" name="lastName" value="<?php echo $userData['lname']; ?>" required>
+            </div>
         </div>
         <div class="row">
-          <div class="col">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?php echo $userData['email']; ?>" required>
-          </div>
-          <div class="col">
-            <label for="phone">Phone number:</label>
-            <input type="tel" id="phone" name="phone" value="<?php echo $userData['phone_number']; ?>">
-          </div>
+            <div class="col">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<?php echo $userData['email']; ?>" required>
+            </div>
+            <div class="col">
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" value="<?php echo $userData['phone-number']; ?>">
+            </div>
         </div>
         <div class="row">
-          <div class="col">
-            <label for="country">Country:</label>
-            <select id="country" name="country" required>
-              <option value="">Choose from...</option>
-              <option value="hungary" <?php echo $userData['country'] == 'hungary' ? 'selected' : ''; ?>>Hungary</option>
-            </select>
-          </div>
-          <div class="col">
-            <label for="zip">Postal code:</label>
-            <input type="text" id="zip" name="zip" value="<?php echo $userData['zip']; ?>" required>
-          </div>
+            <div class="col">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" value="<?php echo $userData['country']; ?>" required>
+            </div>
+            <div class="col">
+                <label for="zip">Postal code:</label>
+                <input type="text" id="zip" name="zip" value="<?php echo $userData['postal-code']; ?>" required>
+            </div>
         </div>
         <div class="row">
-          <div class="col">
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" value="<?php echo $userData['city']; ?>" required>
-          </div>
-          <div class="col">
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" value="<?php echo $userData['address']; ?>">
-          </div>
+            <div class="col">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" value="<?php echo $userData['city']; ?>" required>
+            </div>
+            <div class="col">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" value="<?php echo $userData['address']; ?>">
+            </div>
         </div>
         <button type="submit">Save</button>
-      </form>
-      <button id="deletebutton">Delete Profile</button>
-    </div>
+    </form>
+    <button id="deletebutton">Delete Profile</button>
+  </div>
     <h2>Order history</h2>
         <table>
         <tbody>
