@@ -234,13 +234,6 @@ p {
 
 
 @media screen and (max-width: 1090px) {
-  header{
-    flex-direction: column;
-    justify-content: center;
-  }
-  header #index {
-    padding-left: 0px;
-  }
   .adcontainer {
     display: flex;
     flex-direction: column;
@@ -263,19 +256,6 @@ p {
   }
 }
 @media screen and (max-width: 720px) {
-  #headerlinks{
-    flex-direction: column;
-    padding: 0px;
-  }
-  header{
-    height: 400px;
-    position: relative;
-    gap: 20px;
-  }
-  header #index {
-    font-size: 25px;
-    padding-left: 0px;
-  }
   .waffle {
     width: 80%;
   }
@@ -285,12 +265,7 @@ p {
     justify-content: space-around;
     width: 85%;
   }
-  footer{
-    flex-direction: column;
-    gap: 10px;
-    height: 220px;
-  
-  }
+
 }
 
 

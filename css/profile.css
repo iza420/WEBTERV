@@ -302,11 +302,7 @@ tr .img{
   }
 }
 @media screen and (max-width: 720px) {
-  footer{
-    flex-direction: column;
-    gap: 10px;
-    height: 220px;
-  }
+
   tbody{
     padding: 10px;
   }
