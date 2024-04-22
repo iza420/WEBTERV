@@ -120,15 +120,7 @@ if (isset($_SESSION['orders']) && !empty($_SESSION['orders'])) {
       <p id="no-orders-message">You haven't ordered yet.</p>
       <a href="adminlog.php" id="adminlink"> Admin </a>
       <a href="#top" id="toparrowcontainer"> ↑ </a>
-      <footer>
-      <a href="#top">Home</a>
-      <a href="waffles.php">Order</a>
-      <a href="cart.php">Cart</a>
-      <a href="login.php">Login</a>
-      <a href="register.php">Register</a>
-      <a href="#aboutcontainer">About us</a>
-      <a href="#contactus">Contact us</a>
-    </footer>
-    
+      <?php include 'footer.php'; ?>
+
   </body>
 </html>

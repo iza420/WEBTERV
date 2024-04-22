@@ -132,18 +132,6 @@ p {
 #orderhistory{
   text-align: left;
 }
-footer{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 150px;
-  background-color: rgba(235, 159, 222, 0.5);
-}
-footer a{
-  text-decoration: none;
-  color: #111;
-  font-weight: bold;
-}
 
 table caption {
   color: #c578cf;
@@ -260,20 +248,6 @@ tr .img{
     }
 
   
-  footer{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 150px;
-    background-color: rgba(235, 159, 222, 0.5);
-  
-  }
-  footer a{
-    text-decoration: none;
-    color: #504d4d;
-    font-weight: bold;
-  
-  }
 
 
   #adminlink{
@@ -302,13 +276,7 @@ tr .img{
     transition: background-color 0.5s ease;
   }
 @media screen and (max-width: 1090px) {
-  header{
-    flex-direction: column;
-    justify-content: center;
-  }
-  header #index {
-    padding-left: 0px;
-  }
+
   label{
     display: none;
   }
@@ -317,19 +285,6 @@ tr .img{
   }
 }
 @media screen and (max-width: 720px) {
-  #headerlinks{
-    flex-direction: column;
-    padding: 0px;
-  }
-  header{
-    height: 400px;
-    position: relative;
-    gap: 20px;
-  }
-  header #index {
-    font-size: 25px;
-    padding-left: 0px;
-  }
   footer{
     flex-direction: column;
     gap: 10px;

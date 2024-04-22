@@ -56,15 +56,8 @@ session_start();
 
   <a href="#top" id="toparrowcontainer"> ↑ </a>
 
-  <footer>
-    <a href="index.html">Home</a>
-    <a href="waffles.html">Order</a>
-    <a href="cart.html">Cart</a>
-    <a href="login.html">Login</a>
-    <a href="register.html">Register</a>
-    <a href="index.html">About us</a>
-    <a href="index.html">Contact us</a>
-  </footer>
+  <?php include 'footer.php'; ?>
+
 
 </body>
 
