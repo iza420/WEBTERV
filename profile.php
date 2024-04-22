@@ -1,21 +1,16 @@
 <?php
 session_start();
 
-// Ellenőrizzük, hogy be van-e jelentkezve a felhasználó
 if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
     die("User not logged in.");
 }
-
-// Betöltjük a felhasználó adatait a users.json fájlból
 $usersData = file_get_contents('json/users.json');
 $users = json_decode($usersData, true);
 
-// Ellenőrizzük, hogy a bejelentkezett felhasználó szerepel-e a listában
-$loggedInUserEmail = $_SESSION['email']; // Az aktuálisan bejelentkezett felhasználó e-mail címe
+$loggedInUserEmail = $_SESSION['email'];
 $userData = null;
 
 foreach ($users as $user) {
-    // Ellenőrizzük, hogy a felhasználónak van-e e-mail címe
     if (isset($user['email']) && $user['email'] === $loggedInUserEmail) {
         $userData = $user;
         break;
@@ -84,7 +79,9 @@ if (!$userData) {
         <button type="submit">Save</button>
     </form>
     <button id="deletebutton">Delete Profile</button>
-</div>
+    
+    </div>
+    
     <h2>Order history</h2>
         <table>
         <tbody>
