@@ -6,25 +6,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST["email"];
         $passwd = $_POST["passwd"];
 
-        $usersFile = 'json/users.json'; // A users.json fájl elérési útvonala
+        $usersFile = 'json/users.json';
         $usersData = file_get_contents($usersFile);
 
         if ($usersData !== false) {
             $usersArray = json_decode($usersData, true);
             foreach ($usersArray as $user) {
-                if ($user["email"] == $email && password_verify($passwd, $user["passwd"])) { // Megfelelő jelszó ellenőrzése
-                    // Sikeres bejelentkezés
+                if ($user["email"] == $email && password_verify($passwd, $user["passwd"])) { 
                     $_SESSION["email"] = $email;
-                    header("Location: profile.php"); // Átirányítás a profil oldalra
+                    header("Location: profile.php"); 
                     exit();
                 }
             }
-            echo "Incorrect email or password."; // Hibás e-mail vagy jelszó
+            echo "Incorrect email or password."; 
         } else {
-            echo "An error occurred while loading users."; // Hiba az adatok betöltése közben
+            echo "An error occurred while loading users.";
         }
     } else {
-        echo "Missing email or password."; // Hiányzó e-mail vagy jelszó
+        echo "Missing email or password.";
     }
 }
 ?>
