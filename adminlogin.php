@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$admin_data = json_decode(file_get_contents('admin.json'), true);
+$admin_data = json_decode(file_get_contents('json/admin.json'), true);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adminname = $_POST['adminname'];

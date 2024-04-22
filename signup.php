@@ -1,82 +1,62 @@
 <?php
-session_start();
-
+// Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fname = clean_input($_POST["fname"]);
-    $lname = clean_input($_POST["lname"]);
-    $password = clean_input($_POST["passwd"]);
-    $password_check = clean_input($_POST["passwd-check"]);
-    $phone_number = clean_input($_POST["phone-number"]);
-    $email = clean_input($_POST["email"]);
-
-    $errors = [];
-
-    if (strlen($fname) > 25 || strlen($lname) > 25) {
-        $errors[] = "First name or last name cannot exceed 25 characters.";
-    }
-
-    if ($password !== $password_check) {
-        $errors[] = "Passwords do not match.";
-    }
-    
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "Invalid email format.";
-    }
-
-    // Check if email already exists
-    $existingUsers = getUsersData();
-    foreach ($existingUsers as $userData) {
-        if ($userData['email'] === $email) {
-            $errors[] = "Email address already registered.";
-            break;
+    // Check if the required fields are filled
+    if (isset($_POST['fname'], $_POST['lname'], $_POST['passwd'], $_POST['passwd-check'], $_POST['phone-number'], $_POST['email'])) {
+        
+        // Check if the first name or last name exceeds 25 characters
+        if (strlen($_POST['fname']) > 25 || strlen($_POST['lname']) > 25) {
+            die("First name and/or last name cannot exceed 25 characters.");
         }
-    }
+        // Check if passwords match
+        if ($_POST['passwd'] !== $_POST['passwd-check']) {
+            die("Passwords do not match.");
+        }
 
-    if (empty($errors)) {
-        $userData = [
-            "first_name" => $fname,
-            "last_name" => $lname,
-            "phone_number" => $phone_number,
-            "email" => $email
+        // Check if the email address is valid
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            die("Invalid email address.");
+        }
+
+        // Check if the phone number is in the correct format
+        if (!preg_match("/^36[0-9]{9}$/", $_POST['phone-number'])) {
+            die("Invalid phone number. It should start with '36' and followed by 9 digits.");
+        }
+
+        // Check if the email address has not been registered already
+        $usersData = file_get_contents('json/users.json');
+        $users = json_decode($usersData, true);
+
+        foreach ($users as $user) {
+            if ($user['email'] === $_POST['email']) {
+                die("This email address is already registered.");
+            }
+        }
+
+        // If all checks pass, store the new user's data
+        $newUser = [
+            'fname' => $_POST['fname'],
+            'lname' => $_POST['lname'],
+            'passwd' => password_hash($_POST['passwd'], PASSWORD_DEFAULT), // Hash the password
+            'phone-number' => $_POST['phone-number'],
+            'email' => $_POST['email']
         ];
 
-        // Save new user data to users.json
-        $existingUsers[] = $userData;
-        saveUsersData($existingUsers);
+        // Add the new user to the list of users
+        $users[] = $newUser;
 
-        // Store user data in session (without password)
-        $_SESSION["loggedin"] = true;
-        unset($userData['password']); // Remove password before storing in session
-        $_SESSION["user_data"] = $userData;
+        // Save the updated list of users to the users.json file
+        file_put_contents('json/users.json', json_encode($users));
 
-        // Redirect to profile.php after successful registration
-        header("Location: profile.php");
-        exit;
+        // Successful registration message
+        echo "Registration successful!";
+
+        // Redirect to profile.php
+        header("Location: login.php");
+        exit();
     } else {
-        foreach ($errors as $error) {
-            echo "<p>Error: $error</p>";
-        }
+        die("Missing form fields.");
     }
-}
-
-function clean_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
-function getUsersData() {
-    $jsonFile = 'users.json';
-    if (file_exists($jsonFile)) {
-        return json_decode(file_get_contents($jsonFile), true);
-    }
-    return [];
-}
-
-function saveUsersData($usersData) {
-    $jsonFile = 'users.json';
-    file_put_contents($jsonFile, json_encode($usersData, JSON_PRETTY_PRINT));
 }
 ?>
 

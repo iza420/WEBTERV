@@ -20,7 +20,7 @@
                     <label>Last name: <input type="text" name="lname" size="25"></label>
                     <label>Password: <input type="password" name="passwd" required></label>
                     <label>Password again: <input type="password" name="passwd-check" required></label>
-                    <label>Phone number: <input type="tel" name="phone-number" placeholder="36-xx-xxx-xxxx" pattern="\36-[0-9]{2}-[0-9]{3}-[0-9]{4}" required title="Format: +36-xx-xxx-xxxx"></label>
+                    <label>Phone number: <input type="tel" name="phone-number" placeholder="36012345678" pattern="36[0-9]{9}" required title="Format: 36012345678"></label>
                     <label>E-mail: <input type="email" name="email" required></label>
                 </form>
                 <p>One click and you are done!</p>
