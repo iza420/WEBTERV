@@ -1,55 +1,9 @@
 {
     "users": [],
     "0": {
-        "first_name": "admin",
-        "last_name": "first",
-        "password": "$2y$10$s72bjcLlBixWXIBmaTkyVeqxqQi0tJYOlSSsh9dxbKNrP2FNRFCZm",
-        "phone_number": "36209999999",
-        "email": "adminfirst@waffle.hu"
-    },
-    "1": {
-        "first_name": "admin",
-        "last_name": "second",
-        "password": "$2y$10$RPN8JBf3pc0Eu6PBVj1GJ.bCpSdVNFn6KqLBVTuLxI2kOYHmbsNj.",
-        "phone_number": "36309999999",
-        "email": "adminsecond@waffle.hu"
-    },
-    "2": {
-        "first_name": "first",
-        "last_name": "user",
-        "password": "$2y$10$YZEd3UOl4wCBl6x0bUdtvOuWe0wJ0F.NUg3briTPZ7FpF25dh53\/a",
+        "first_name": "els\u0151",
+        "last_name": "regisztr\u00e1l\u00f3",
         "phone_number": "36301111111",
-        "email": "firstuser11@gmail.com"
-    },
-    "3": {
-        "first_name": "egy",
-        "last_name": "kett",
-        "password": "$2y$10$3xOoWDceQ9VdYkyQlQm7c.R5e1PpOVen24avvrwzW8GOs5PI\/Dr8G",
-        "phone_number": "36301412424",
-        "email": "kett@kett.hu"
-    },
-    "4": {
-        "first_name": "ez",
-        "last_name": "mi",
-        "phone_number": "36301241241",
-        "email": "micsoda@ez.hu"
-    },
-    "5": {
-        "first_name": "ez",
-        "last_name": "mi",
-        "phone_number": "36301241241",
-        "email": "micsoda@ez.hu"
-    },
-    "6": {
-        "first_name": "ez",
-        "last_name": "miggggggggg",
-        "phone_number": "36301341241",
-        "email": "mifffcsoda@ez.hu"
-    },
-    "7": {
-        "first_name": "ez",
-        "last_name": "miggggggggg",
-        "phone_number": "36301341241",
-        "email": "mifffcsoda@ez.hu"
+        "email": "elsoregisztralo@gma-ill.com"
     }
 }

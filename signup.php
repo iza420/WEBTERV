@@ -23,6 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Invalid email format.";
     }
 
+    // Check if email already exists
+    $existingUsers = getUsersData();
+    foreach ($existingUsers as $userData) {
+        if ($userData['email'] === $email) {
+            $errors[] = "Email address already registered.";
+            break;
+        }
+    }
+
     if (empty($errors)) {
         $userData = [
             "first_name" => $fname,
@@ -31,18 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "email" => $email
         ];
 
-        // Load existing user data from users.json
-        $usersData = [];
-        $jsonFile = 'users.json';
-        if (file_exists($jsonFile)) {
-            $usersData = json_decode(file_get_contents($jsonFile), true);
-        }
-
-        // Add new user data
-        $usersData[] = $userData;
-
-        // Save updated user data back to users.json
-        file_put_contents($jsonFile, json_encode($usersData, JSON_PRETTY_PRINT));
+        // Save new user data to users.json
+        $existingUsers[] = $userData;
+        saveUsersData($existingUsers);
 
         // Store user data in session (without password)
         $_SESSION["loggedin"] = true;
@@ -65,5 +65,19 @@ function clean_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
+function getUsersData() {
+    $jsonFile = 'users.json';
+    if (file_exists($jsonFile)) {
+        return json_decode(file_get_contents($jsonFile), true);
+    }
+    return [];
+}
+
+function saveUsersData($usersData) {
+    $jsonFile = 'users.json';
+    file_put_contents($jsonFile, json_encode($usersData, JSON_PRETTY_PRINT));
+}
 ?>
+
 

@@ -1,33 +1,17 @@
 <?php
-$usersData = file_get_contents('users.json');
-$users = json_decode($usersData, true);
+session_start();
+
+$admin_data = json_decode(file_get_contents('admin.json'), true);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['adminname']) && isset($_POST['passwd'])) {
-        $adminname = $_POST['adminname'];
-        $password = $_POST['passwd'];
-        $isAdmin = false;
-        foreach ($users as $key => $user) {
-            if (isset($user['first_name']) && isset($user['last_name']) && isset($user['email']) && isset($user['password'])) {
-                $fullName = $user['first_name'] . ' ' . $user['last_name'];
-                $userEmail = $user['email'];
-                $userPasswordHash = $user['password'];
-                if ($adminname === $fullName && $userEmail === $password) {
-                    if (substr($userEmail, -10) === '@waffle.hu') {
-                        $isAdmin = true;
-                        break;
-                    }
-                }
-            }
-        }
-        if ($isAdmin) {
-            header("Location: admin.php");
-            exit();
-        } else {
-            echo "Permission denied!";
-        }
+    $adminname = $_POST['adminname'];
+    $passwd = $_POST['passwd'];
+
+    if ($adminname == $admin_data['adminname'] && $passwd == $admin_data['passwd']) {
+        $_SESSION['adminname'] = $adminname;
+        header("Location: admin.php");
+    } else {
+        echo "Access denied!";
     }
 }
 ?>
-
-
